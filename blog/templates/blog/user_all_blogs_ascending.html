@@ -1,8 +1,8 @@
-{% extends "blog/base.html" %} {% block content %}Userhome
+{% extends "blog/base.html" %} {% load static %} {% block content %}
 
-<a href="{% url 'blog:createBlogs' %}">Create</a>
+<h4>See the blogs created last as top <a href="{% url 'blog:user_all_blogs' %}">Click Here</a> </h4>
 
-<h1 id="blogtitle" class="font-weight-bold text-center">{{ user.username }}'s Blog</h1>
+<h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
 
 <h3 class="text-center mb-5">There are {{ blogs.count }} blog{{ blogs.count|pluralize }} here</h3>
 
@@ -14,18 +14,6 @@
         </a>
         <h5 class="text-muted">{{ i.created_on}}</h5>
         <h4>{{ i.content|striptags|truncatechars:100 }}</h4>
-
-
     </div>
 </div>
-
-<br> {% endfor %}
-
-
-<div class="row justify-content-center my-3">
-    <div>
-        <h5>To see all the blogs <a href="{% url 'blog:user_all_blogs' %}">click here</a></h5>
-    </div>
-</div>
-
-{% endblock %}
+{% endfor %} {% endblock %}

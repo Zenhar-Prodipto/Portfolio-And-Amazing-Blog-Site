@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %} {% load static %} {% block content %}
+
+<h4>See the blogs created first at top <a href="{% url 'blog:user_all_blogs_ascending' %}">Click Here</a> </h4>
+
+<h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
+
+<h3 class="text-center mb-5">There are {{ blogs.count }} blog{{ blogs.count|pluralize }} here</h3>
+
+{% for i in blogs %}
+<div class="row justify-content-center my-3">
+    <div class="col-md-10">
+        <a href="{% url 'blog:userBlogDetails' i.id %}">
+            <h2>{{ i.title }}</h2>
+        </a>
+        <h5 class="text-muted">{{ i.created_on}}</h5>
+
+
+        <h4>{{ i.content|striptags|truncatechars:100 }}</h4>
+    </div>
+</div>
+{% endfor %} {% endblock %}

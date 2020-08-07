@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %} {% load static %} {% block content %}
+
+<h1 class="text-center mt-5">{{ userBlog.title }}</h1>
+
+<h5 class="text-center text-muted mb-5">{{ userblog.created_on}}</h5>
+
+
+
+{{ userBlog.content|safe }} {% endblock %}

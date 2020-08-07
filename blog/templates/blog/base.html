@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="{% static 'portfolio/images/Logo.png' %}">
+    <link class="logoclass" rel="icon" type="image/png" href="{% static 'portfolio/images/Logo.png' %}">
 
     <title>Zenhar</title>
 </head>
@@ -43,6 +43,7 @@
                         <form style='display: none;' method="POST" action="{% url 'blog:logoutUser' %}">
                             {% csrf_token %}
                             <button id="signOutBtn" type="submit">Logout</button>
+                        </form>
                     </li>
                     <li>
                         <a role="button" href="{% url 'blog:home' %}" class="btn btn-primary">Blog</a>

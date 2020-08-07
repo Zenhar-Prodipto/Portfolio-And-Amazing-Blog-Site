@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
 from .forms import UserBlogForm
 from .models import Blog
+from .models import UserBlog
 
 # Create your views here.
 def home(request):
@@ -59,7 +60,9 @@ def signupUser(request):
 #User sign up sheshe jeikhaney jaabe
 
 def userhome(request):
-   return render(request, "blog/userhome.html")
+    
+    blogs = UserBlog.objects.filter(user=request.user).order_by('-created_on')[:2]
+    return render(request, "blog/userhome.html",{"blogs":blogs})
 
 
 #Logout er view
@@ -112,13 +115,30 @@ def createBlogs(request):
             newBlog = form.save(commit=False) #Not saving to the db yet
             newBlog.user = request.user
             newBlog.save() #now it's saved to the user.
-            return redirect ("blog:currentBlogs")
+            return redirect ('blog:userhome')
         except ValueError:
             return render(request, "blog/createBlogs.html", {"form":UserBlogForm(),"error": "Bad Data"})
 
+
+def userBlogDetails(request, user_blog_id):
+  
+    userBlog = get_object_or_404(UserBlog, pk = user_blog_id, user= request.user)
+    return render(request, "blog/userBlogDetails.html", {"userBlog":userBlog} )
         
 
-# gjsgfkjsgfjksgfkjsgf
+ 
+ #Shob blog dekha jaabe eikhane descending order e
+def user_all_blogs(request):
+
+    blogs = UserBlog.objects.all()
+    # blogs = UserBlog.objects.order_by('-created_on')
+    return render(request, "blog/user_all_blogs.html", {"blogs":blogs})
+
+#Shob blog dekha jaabe eikhane ascending order e
+def user_all_blogs_ascending(request):
+    
+    blogs = UserBlog.objects.order_by('created_on')
+    return render(request, "blog/user_all_blogs_ascending.html", {"blogs":blogs})
 
 
 

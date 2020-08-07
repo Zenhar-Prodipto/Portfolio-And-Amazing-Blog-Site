@@ -17,7 +17,7 @@ class Blog(models.Model):
 class UserBlog(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField ()
-    created_on = models.DateTimeField()
+    created_on = models.DateTimeField(null=True)
     images = models.ImageField(upload_to="portfolio/images/",blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
