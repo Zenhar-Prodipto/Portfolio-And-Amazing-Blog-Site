@@ -130,17 +130,24 @@ def userBlogDetails(request, user_blog_id):
  #Shob blog dekha jaabe eikhane descending order e
 def user_all_blogs(request):
 
-    blogs = UserBlog.objects.all()
+    blogs = UserBlog.objects.filter(user=request.user)
     # blogs = UserBlog.objects.order_by('-created_on')
     return render(request, "blog/user_all_blogs.html", {"blogs":blogs})
 
 #Shob blog dekha jaabe eikhane ascending order e
 def user_all_blogs_ascending(request):
     
-    blogs = UserBlog.objects.order_by('created_on')
+    blogs = UserBlog.objects.filter(user=request.user).order_by('created_on')
     return render(request, "blog/user_all_blogs_ascending.html", {"blogs":blogs})
 
+#Delete Blogs
 
+def deleteblog(request,user_blog_id):
+    blog = get_object_or_404(UserBlog, pk=user_blog_id, user = request.user)
+    if request.method=="POST":
+        blog.delete()
+        return redirect ("blog:userhome")
+    
 
 
 

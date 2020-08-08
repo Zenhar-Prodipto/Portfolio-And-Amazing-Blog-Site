@@ -21,6 +21,7 @@ urlpatterns = [
     path("userhome/<int:user_blog_id>/",views.userBlogDetails,name="userBlogDetails"), #User's blog details
     path("userhome/userallblogs/",views.user_all_blogs, name="user_all_blogs"), #User's all blogs
     path("userhome/userallblogs/userallblogsascending/",views.user_all_blogs_ascending, name="user_all_blogs_ascending"), #Users blog ascending
+    path("userhome/<int:user_blog_id>/delete",views.deleteblog, name="deleteblog"), #User Delete blogs
     
     
     
