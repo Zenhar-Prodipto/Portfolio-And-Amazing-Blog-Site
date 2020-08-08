@@ -121,7 +121,7 @@ def createBlogs(request):
 
 
 def userBlogDetails(request, user_blog_id):
-  
+
     userBlog = get_object_or_404(UserBlog, pk = user_blog_id, user= request.user)
     return render(request, "blog/userBlogDetails.html", {"userBlog":userBlog} )
         
@@ -150,13 +150,41 @@ def deleteblog(request,user_blog_id):
     
 
 
+# def editblog(request,user_blog_id):
+#     userBlog = get_object_or_404(UserBlog,pk= user_blog_id, user=request.user)
+#     if request.method == "Get":
+        
+#         form = UserBlogForm(instance = userBlog)
+#         return render (request, "blog/editblog.html",{"userBlog":userBlog, "form":form})
+#     else:
+#         try:
+           
+#             form = UserBlogForm(request.POST,instance = userBlog)
+#             form.save()
+#             return redirect("blog:userhome")
+#         except ValueError:
+#             return render(request,"blog/editblog.html",{"userBlog":userBlog,"form":UserBlogForm(),"error":"Value Error"})
 
 
 
+def editblog(request,user_blog_id):
 
+    userBlog = get_object_or_404(UserBlog,pk= user_blog_id, user=request.user)
+    if request.method == "GET":
+        form = UserBlogForm(instance = userBlog)
+        return render(request, "blog/editblog.html",{"userBlog":userBlog, "form":form})
+    else:
+            
+        try:
+                
+            form = UserBlogForm(request.POST,instance = userBlog)
+            form.save()
+            return redirect("blog:userhome")
+        except ValueError:
+                
+            return render(request,"blog/editblog.html",{"userBlog":userBlog,"form":UserBlogForm(),"error":"Value Error"})
 
-
-
+    
 
 
 

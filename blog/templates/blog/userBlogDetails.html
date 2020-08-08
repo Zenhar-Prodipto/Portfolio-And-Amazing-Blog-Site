@@ -4,6 +4,8 @@
 
 <h5 class="text-center text-muted mb-5">{{ userBlog.created_on}}</h5>
 
+{{ userBlog.content|safe }}
+
 <form action="{% url 'blog:deleteblog' userBlog.id %}" method="POST">
     {% csrf_token %}
     <button type="submit">Delete</button>
@@ -11,6 +13,4 @@
 
 </form>
 
-
-
-{{ userBlog.content|safe }} {% endblock %}
+<a href="{% url 'blog:editblog' userBlog.id %}">Edit</a> {% endblock %}
