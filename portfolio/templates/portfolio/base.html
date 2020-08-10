@@ -12,7 +12,9 @@
 
     <link rel="stylesheet" href="{% static 'portfolio/portfolio_css.css' %}">
 
+    <!-- FONT FAMILIES -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="{% static 'portfolio/images/Logo.png' %}">
 
@@ -49,9 +51,11 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        {% block content %}{% endblock %}
-    </div>
+
+    <!-- <div class="container"> -->
+    {% block content %}{% endblock %}
+    <!-- </div> -->
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

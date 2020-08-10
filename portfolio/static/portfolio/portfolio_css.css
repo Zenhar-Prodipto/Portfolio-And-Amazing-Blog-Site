@@ -1,3 +1,33 @@
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+}
+
+
+/* Body and others */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 30px;
+    border: rgba(12, 146, 57, 0.842) 3px solid;
+}
+
+
+/* ================================================================ */
+
+
+/* NAVBAR  */
+
 .navbar-nav .nav-link {
     color: rgba(0, 0, 0, 1) !important;
 }
@@ -6,19 +36,14 @@
     color: rgba(0, 0, 0, .5) !important;
 }
 
-body {
-    font-family: 'Lato', sans-serif;
+
+/* ================================================================== */
+
+.header-main {
+    height: 45vh;
+    border: indigo solid 3px;
 }
 
-#blogtitle {
-    font-size: 6rem;
-}
-
-@media (min-width: 992px) {
-    #hometext {
-        font-size: 4rem;
-    }
-    #blogdetailtitle {
-        font-size: 5rem;
-    }
+#img {
+    height: 50vh;
 }

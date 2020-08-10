@@ -1,16 +1,22 @@
- {% extends "portfolio/base.html" %} {% load static %} {% block content %}
-
-<div class="row justify-content-center my-3">
-    <div class="col-5">
-        <img src="{% static 'portfolio/images/Logo.png' %}" class="img-fluid">
+{% extends "portfolio/base.html" %} {% load static %} {% block content %}
+<!-- 
+    <div class="row justify-content-center my-3">
+        <div class="col-5">
+            <img src="{% static 'portfolio/images/Logo.png' %}" class="img-fluid">
+        </div>
     </div>
-</div>
 
 <div class="row justify-content-center mb-3">
     <div class="col-md-9 text-center">
         <h1 id="hometext" class="font-weight-bold">My Portfolio Project 😊</h1>
     </div>
-</div>
+</div> -->
+<header class="header-main">
+    <div class="header-image">
+        <img id="img" src="{% static 'portfolio/images/Logo.png' %}">
+    </div>
+
+</header>
 
 <h2 class="mt-5">Portfolio</h2>
 <hr>
