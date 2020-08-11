@@ -1,6 +1,7 @@
 {% extends "blog/base.html" %} {% block content %} {{error}}
-
+<div class="reg-main"></div>
 <form method="POST">
+
 
     {% csrf_token %} {{ form.as_p}}
 
@@ -9,6 +10,6 @@
 </form>
 
 
-
+</div>
 
 {% endblock %}

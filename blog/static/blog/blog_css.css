@@ -73,10 +73,16 @@ body {
 
 .login-main {
     background-color: blanchedalmond;
-    border: indigo solid 2px;
-    position: absolute;
+    /* border: indigo solid 2px; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.reg-main {
+    background-color: blanchedalmond;
+    border: red solid 2px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 50vh;
 }

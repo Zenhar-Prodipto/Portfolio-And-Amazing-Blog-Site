@@ -1,5 +1,9 @@
 from django.forms import ModelForm
+from django import forms
 from .models import UserBlog 
+from django.contrib.auth.forms import AuthenticationForm,UserCreationForm
+from django.contrib.auth.models import User
+
 
 
 #Form class for userBlog model
@@ -7,3 +11,31 @@ class UserBlogForm(ModelForm):
     class Meta:
         model = UserBlog
         fields = ["title", 'content', 'images']
+
+#Login Form
+class LoginForm(AuthenticationForm):
+    class Meta:
+        model = User
+        fields = ['username','password']
+
+    widgets = {
+        'username':forms.TextInput(attrs={'class':"form-control"}),
+        'password':forms.TextInput(attrs={'class':"form-control"}),
+    }
+
+
+class RegistrationForm(UserCreationForm):
+    # email = forms.EmailField(max_length=64, help_text='Enter a valid email address')
+    class Meta:
+        model = User
+        fields = ['username','password1','password2']
+        # fields = ['username','password1','password2','email']
+
+    widgets = {
+        'username':forms.TextInput(attrs={'class':"reg-user"}),
+        'password1':forms.PasswordInput(attrs={'class':"form-control"}),
+        'password2':forms.PasswordInput(attrs={'class':"form-control"}),
+        # 'email':forms.EmailInput(attrs={'class':"form-control"}),
+    }
+
+      

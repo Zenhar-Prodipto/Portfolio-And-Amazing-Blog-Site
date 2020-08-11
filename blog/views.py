@@ -6,7 +6,7 @@ from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
-from .forms import UserBlogForm
+from .forms import UserBlogForm,LoginForm,RegistrationForm
 from .models import Blog
 from .models import UserBlog
 
@@ -39,7 +39,7 @@ def all_blogs_ascending(request):
 
 def signupUser(request):
     if request.method == "GET":
-        return render(request, "blog/signupUser.html", {"form":UserCreationForm})
+        return render(request, "blog/signupUser.html", {"form":RegistrationForm})
     else:
         if request.POST["password1"] == request.POST["password2"]: #Post req hoile test korbe password duita milse kina
 
@@ -52,10 +52,10 @@ def signupUser(request):
                 
             except IntegrityError: #jodi unique name na thaake tahole aabar notun kore choose korbe
                 error = "That user name is already taken"
-                return render(request, "blog/signupUser.html",{"form":UserCreationForm, "error": error})    
+                return render(request, "blog/signupUser.html",{"form":RegistrationForm, "error": error})    
         else: #password match na korle
             error= "Your Password didn't match!!"
-            return render(request, "blog/signupUser.html",{"form":UserCreationForm, "error": error})  
+            return render(request, "blog/signupUser.html",{"form":RegistrationForm, "error": error})  
 
 #User sign up sheshe jeikhaney jaabe
 
@@ -75,7 +75,7 @@ def logoutUser(request):
 #Login er view
 def loginUser(request):
     if request.method == "GET":
-        return render (request, "blog/loginUser.html",{ "form": AuthenticationForm()}) #jodi get hoy than login page ashbe with authentication form
+        return render (request, "blog/loginUser.html",{ "form": LoginForm()}) #jodi get hoy than login page ashbe with authentication form
 
     else:
         username = request.POST.get('username')
@@ -100,7 +100,7 @@ def loginUser(request):
 
         else:
 
-            return render (request, "blog/loginUser.html",{ "form": AuthenticationForm(),"error":"Username or password not found!!"}) 
+            return render (request, "blog/loginUser.html",{ "form": LoginForm(),"error":"Username or password not found!!"}) 
             
 
 
