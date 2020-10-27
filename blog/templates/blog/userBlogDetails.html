@@ -6,10 +6,12 @@
 
 {{ userBlog.content|safe }}
 
+
 <form action="{% url 'blog:deleteblog' userBlog.id %}" method="POST">
     {% csrf_token %}
-    <button type="submit">Delete</button>
-
+    <div class="delete-button">
+        <button type="submit">Delete</button>
+    </div>
 
 </form>
 

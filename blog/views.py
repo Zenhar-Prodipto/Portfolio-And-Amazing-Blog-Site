@@ -13,7 +13,7 @@ from .models import UserBlog
 # Create your views here.
 def home(request):
     # blogs = Blog.objects.all()
-    blogs = Blog.objects.order_by('-created_on')[:2] #Prothom 5 taah show korbe. And create korar time onujayi shajabe
+    blogs = Blog.objects.order_by('-created_on')[:2] #Prothom 2 taah show korbe. And create korar time onujayi shajabe
     return render(request, "blog/home.html", {"blogs":blogs})
 
 #Details view. blog_id parameter nichhe karon url e blog_id parameter disi jeita integer value nibe. 

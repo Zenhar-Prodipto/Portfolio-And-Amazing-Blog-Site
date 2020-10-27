@@ -1,15 +1,17 @@
 {% extends "blog/base.html" %} {% block content %} {{error}}
-<div class="reg-main"></div>
-<form method="POST">
+<div class="login-and-reg-div">
+<div class="reg-main">
+    <form method="POST">
 
 
-    {% csrf_token %} {{ form.as_p}}
+        {% csrf_token %} {{ form.as_p}}
 
-    <button type="submit">Sign up</button>
+        <button class="btn btn-primary type="submit">Sign up</button>
 
-</form>
-
+    </form>
 
 </div>
+</div>
+
 
 {% endblock %}

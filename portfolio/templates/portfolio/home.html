@@ -11,6 +11,14 @@
         <h1 id="hometext" class="font-weight-bold">My Portfolio Project 😊</h1>
     </div>
 </div> -->
+<!-- <div class="row">
+    <div class="col">
+        <h5>Something</h5>
+    </div>
+    <div class="col">
+        <img id="img" src="{% static 'portfolio/images/Logo.png' %}">
+    </div>
+</div> -->
 <header class="header-main">
     <div class="header-image">
         <img id="img" src="{% static 'portfolio/images/Logo.png' %}">
@@ -18,15 +26,19 @@
 
 </header>
 
-<h2 class="mt-5">Portfolio</h2>
-<hr>
-<div class="row">
+
+<!-- <h2 class="mt-5">Portfolio</h2>
+<hr> -->
+<!-- <div class="portfolio-main-div">
     {% for i in projects %}
     <div class="col-lg-4 col-md-6">
 
         {% if i.url %}
         <a href="{{ i.url }}">
-            <img src="{{ i.image.url }}" class="img-fluid mb-2">
+            <div class="portfolio-image-container">
+                <img src="{{ i.image.url }}" class="portfolio-image">
+            </div>
+            
         </a>
         {% else %}
 
@@ -36,6 +48,73 @@
 
     </div>
     {% endfor %}
+</div> -->
+
+
+
+
+<h2 class="mt-5" id="portfolio-margin">Portfolio</h2>
+<hr>
+<h2 class="mt-5" id="portfolio-margin">Web Projects</h2>
+<hr>
+
+
+<div class="row">
+    {% for project in web_projects %}
+<div class="col mt-4 mb-4">
+<div class="card" style="width: 18rem;">
+    <img src="{{ project.image.url }}" class="portfolio-image"> 
+    <div class="card-body">
+      <h5 class="card-title">{{project.title}}</h5>
+      <hr>
+      <p class="card-text">{{project.descriptions}}</p>
+      <hr>
+        {% if project.url %}
+        <p class="card-text"> <a href="{{project.url }}">{{project.url}}</a> </p>
+
+        {% else %}
+        <p class="card-text">No URL yet.</p>
+            
+        {% endif %}
+
+    </div>
+  </div>
+  </div>
+  {% endfor %}
 </div>
 
+<hr>
+<h2 class="mt-5" id="portfolio-margin" >Machine Learning Projects</h2>
+
+<div class="row">
+    {% for project in ml_projects %}
+<div class="col mt-4 mb-4">
+<div class="card" style="width: 18rem;">
+    <img src="{{ project.image.url }}" class="portfolio-image"> 
+    <div class="card-body">
+      <h5 class="card-title">{{project.title}}</h5>
+      <hr>
+      <p class="card-text">{{project.descriptions}}</p>
+      <hr>
+        {% if project.url %}
+        <p class="card-text"> <a href="{{project.url }}">{{project.url}}</a> </p>
+
+        {% else %}
+        <p class="card-text">No URL yet.</p>
+            
+        {% endif %}
+
+    </div>
+  </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+<div class="footer">
+<div class="image-color"></div>
+    <img id="footer-img" src="{% static 'portfolio/images/Logo.png' %}">
+
+    
+  </div>
 {% endblock %}
