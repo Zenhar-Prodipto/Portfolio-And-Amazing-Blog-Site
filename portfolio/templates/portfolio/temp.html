@@ -1,5 +1,3 @@
-
-
 {% extends "portfolio/base.html" %} {% load static %} {% block content %}
 
 <div class="headterTillFooter">
@@ -12,32 +10,27 @@
 </header>
 
 
-<div class="portfolio-text-div">
-    <h2 class="portfolio-text">Here're my Works</h2>
+<div class="portfolio-text">
+    <h2>Here're my Works</h2>
 </div>
 
 
 
 
 <hr>
-<h2 class="mt-5 web-project-text" id="portfolio-margin">Web Projects</h2>
+<h2 class="mt-5" id="portfolio-margin">Web Projects</h2>
 <hr>
 
 
 <div class="row">
     {% for project in web_projects %}
-<div class="col-lg-3 col-md-6 ">
+<div class="col-lg-4 col-md-6 ">
 <div class="card" style="width:18rem ">
     <img src="{{ project.image.url }}" class="portfolio-image"> 
     <div class="card-body">
-      <h5 class="card-title"><strong>{{project.title}}</strong></h5>
+      <h5 class="card-title">{{project.title}}</h5>
       <hr>
-
       <p class="card-text">{{project.descriptions}}</p>
-      <a href=" {% url 'portfolio:home' %}">see more</a>
-      <!-- {{project.descriptions|safe|truncatewords:'10'|linebreaks}} -->
-  
-     
       <hr>
         {% if project.url %}
         <p class="card-text"> <a href="{{project.url }}">{{project.url}}</a> </p>
@@ -46,7 +39,6 @@
         <p class="card-text">No URL yet.</p>
             
         {% endif %}
-        
 
     </div>
   </div>
@@ -55,7 +47,7 @@
 </div>
 
 <hr>
-<h2 class="mt-5 portfolio-text-div" id="portfolio-margin" >Machine Learning Projects</h2>
+<h2 class="mt-5" id="portfolio-margin" >Machine Learning Projects</h2>
 
 <div class="row">
     {% for project in ml_projects %}
@@ -63,7 +55,7 @@
 <div class="card" style="width: 18rem;">
     <img src="{{ project.image.url }}" class="portfolio-image"> 
     <div class="card-body">
-      <h5 class="card-title"><strong>{{project.title}}</strong></h5>
+      <h5 class="card-title">{{project.title}}</h5>
       <hr>
       <p class="card-text">{{project.descriptions}}</p>
       <hr>
@@ -89,7 +81,7 @@
 <div class="footer-flex">
 <div class="box1">
     <!-- <img id="footer-img" style="height:15vh;" src="{% static 'portfolio/images/Logo.png' %}"> -->
-    <h4  class='footer-headers'>About Me</h4>
+    <h4>About Me</h4>
     <p>A Computer Science graduate trying explore this massive paradimn with curiosity.</p>
     <h4>Academic Interests:</h4>
     <ul>
@@ -98,20 +90,11 @@
         <li>Machine Learning</li>
         <li>Data Structure & Algorithm</li>
     </ul>
-
-    <h4>General Interests:</h4>
-    <ul>
-        <li>World History & Civilization</li>
-        <li>Philosophy</li>
-        <li>Language & Literature</li>
-        <li>Paintings, Music & Films</li>
-    </ul>
 </div>
 
 <div class="box2">
-    <h4 class='footer-headers'>Skills</h4>
     <div class="box-2-skills">
-    
+    <h4>Skills</h4>
     <h5>Languages</h5>
     <ul>
         <li>Python</li>
@@ -136,12 +119,12 @@
 
 <div class="box3">
 
-    <h4 class='footer-headers'>Contacts:</h4>
+    <h4>Contacts:</h4>
     <div class="social-media-icons">
     <ul class="">
-        <li><a href="https://www.gmail.com/"><i class="fa fa-email icons" aria-hidden="true"></i>Email: zenhar.mz@gmail.com </a></li>
-        <li><a href="https://www.linkedin.com/in/mustafa-zenhar/"><i class="fa fa-linkedin icons" aria-hidden="true"></i>LinkedIn </a></li>
-        <li><a href="https://github.com/Zenhar-Prodipto"><i class="fa fa-github icons" aria-hidden="true"></i>Github </a></li>
+        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook icons" aria-hidden="true"></i>Gmail </a></li>
+        <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram icons" aria-hidden="true"></i>LinedIn </a></li>
+        <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p icons" aria-hidden="true"></i>Github </a></li>
         <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter icons" aria-hidden="true"></i>Twitter </a></li>
       </ul>
     </div>
