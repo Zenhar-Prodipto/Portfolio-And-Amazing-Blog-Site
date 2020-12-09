@@ -23,7 +23,7 @@
 
     <link rel="icon" type="image/png" href="{% static 'portfolio/images/Logo.png' %}">
 
-    <title>Zenhar</title>
+    {% block title %} <title>Zenhar</title> {% endblock %}
 </head>
 
 <body>
@@ -40,6 +40,9 @@
             <div class="collapse navbar-collapse text-center" id="navbarNav">
 
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio:skillsAndAbout' %}">Skills</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% static 'portfolio/myCV.pdf' %}">Resume</a>
                     </li>
@@ -58,7 +61,82 @@
     </nav>
 
     <!-- <div class="container"> -->
-    {% block content %}{% endblock %}
+    {% block content %}
+    
+    
+    
+    {% endblock %}
+
+    <footer>
+        <div class="footer-main">
+        <div class="footer-flex">
+        <div class="box1">
+            <!-- <img id="footer-img" style="height:15vh;" src="{% static 'portfolio/images/Logo.png' %}"> -->
+            <h4  class='footer-headers'>About Me</h4>
+            <p>A Computer Science graduate trying explore this massive paradimn with curiosity.</p>
+            <h4>Academic Interests:</h4>
+            <ul>
+                <li>Web Development</li>
+                <li>Data Science</li>
+                <li>Machine Learning</li>
+                <li>Data Structure & Algorithm</li>
+            </ul>
+        
+            <h4>General Interests:</h4>
+            <ul>
+                <li>World History & Civilization</li>
+                <li>Philosophy</li>
+                <li>Language & Literature</li>
+                <li>Paintings, Music & Films</li>
+            </ul>
+        </div>
+        
+        <div class="box2">
+            <h4 class='footer-headers'>Skills</h4>
+            <div class="box-2-skills">
+            
+            <h5>Languages</h5>
+            <ul>
+                <li>Python</li>
+                <li>Javascript</li>
+                <li>Java</li>
+            </ul>
+        
+            <h5>Frameworks</h5>
+            <ul>
+            <li>Node(ExpressJs)</li>
+            <li>Django Web Framework</li>
+            <li>ReactJs</li>
+        </ul>
+            <h5>Libraries</h5>
+            <ul>
+                <li>Scikit-Learn</li>
+                <li>Pandas</li>
+                <li>Tensorflow</li>
+            </ul>
+        </div>
+        </div>
+        
+        <div class="box3">
+        
+            <h4 class='footer-headers'>Contacts:</h4>
+            <div class="social-media-icons">
+            <ul class="">
+                <li><a href="https://www.gmail.com/"><i class="fa fa-email icons" aria-hidden="true"></i>Email: zenhar.mz@gmail.com </a></li>
+                <li><a href="https://www.linkedin.com/in/mustafa-zenhar/"><i class="fa fa-linkedin icons" aria-hidden="true"></i>LinkedIn </a></li>
+                <li><a href="https://github.com/Zenhar-Prodipto"><i class="fa fa-github icons" aria-hidden="true"></i>Github </a></li>
+                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter icons" aria-hidden="true"></i>Twitter </a></li>
+              </ul>
+            </div>
+        </div>
+        </div>
+        
+        <div class="big-Thank-You">
+            <h2>A Big Thank You to you!</h2>
+        </div>
+        </div>
+              
+        </footer>
     <!-- </div> -->
 
 

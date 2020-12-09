@@ -1,4 +1,7 @@
-{% extends "portfolio/base.html" %} {% load static %} {% block content %}
+{% extends "portfolio/base.html" %} {% load static %} 
+
+{% block title %}<title> skills</title>{% endblock %}
+{% block content %}
 
 <div class="headterTillFooter">
 
@@ -76,65 +79,5 @@
 
 </div>
 
-<footer>
-<div class="footer-main">
-<div class="footer-flex">
-<div class="box1">
-    <!-- <img id="footer-img" style="height:15vh;" src="{% static 'portfolio/images/Logo.png' %}"> -->
-    <h4>About Me</h4>
-    <p>A Computer Science graduate trying explore this massive paradimn with curiosity.</p>
-    <h4>Academic Interests:</h4>
-    <ul>
-        <li>Web Development</li>
-        <li>Data Science</li>
-        <li>Machine Learning</li>
-        <li>Data Structure & Algorithm</li>
-    </ul>
-</div>
 
-<div class="box2">
-    <div class="box-2-skills">
-    <h4>Skills</h4>
-    <h5>Languages</h5>
-    <ul>
-        <li>Python</li>
-        <li>Javascript</li>
-        <li>Java</li>
-    </ul>
-
-    <h5>Frameworks</h5>
-    <ul>
-    <li>Node(ExpressJs)</li>
-    <li>Django Web Framework</li>
-    <li>ReactJs</li>
-</ul>
-    <h5>Libraries</h5>
-    <ul>
-        <li>Scikit-Learn</li>
-        <li>Pandas</li>
-        <li>Tensorflow</li>
-    </ul>
-</div>
-</div>
-
-<div class="box3">
-
-    <h4>Contacts:</h4>
-    <div class="social-media-icons">
-    <ul class="">
-        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook icons" aria-hidden="true"></i>Gmail </a></li>
-        <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram icons" aria-hidden="true"></i>LinedIn </a></li>
-        <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p icons" aria-hidden="true"></i>Github </a></li>
-        <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter icons" aria-hidden="true"></i>Twitter </a></li>
-      </ul>
-    </div>
-</div>
-</div>
-
-<div class="big-Thank-You">
-    <h2>A Big Thank You to you!</h2>
-</div>
-</div>
-      
-</footer>
 {% endblock %}
