@@ -41,6 +41,11 @@ def home(request):
 #         return context
 
 
-class skillsAndAbout(ListView):
-    template_name = "portfolio/skillsAndAbout.html"
+class skills(ListView):
+    template_name = "portfolio/skills.html"
+    queryset = Web_Project.objects.all()
+
+
+class aboutMe(ListView):
+    template_name = "portfolio/aboutMe.html"
     queryset = Web_Project.objects.all()

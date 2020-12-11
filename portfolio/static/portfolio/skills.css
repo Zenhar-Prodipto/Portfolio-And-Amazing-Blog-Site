@@ -1,0 +1,160 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.skill-header {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  animation-name: skills-text-animation;
+  animation-duration: 3s;
+}
+
+@keyframes skills-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.skills {
+  height: 95vh;
+  /* border: 1px red solid; */
+  text-align: center;
+  /* Other good colors: #093028 #237A57 */
+  background-image: linear-gradient(to bottom right, #34e89e, #0f3443);
+  opacity: 1;
+  color: white;
+  position: relative;
+}
+.skills > h3 {
+  padding-top: 5px;
+}
+
+.skills-pyramid-explanation {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  text-align: start;
+}
+.skills-pyramid-explanation span {
+  color: #000000;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.carousel {
+  padding: 5px;
+  height: 95%;
+  /* border: 2px rgb(28, 40, 177) solid; */
+}
+.carousel-inner {
+  /* border: 2px purple solid; */
+  height: 95%;
+  padding: 5px;
+}
+
+.carousel-item {
+  /* border: 2px green solid; */
+  padding: 5px;
+  height: 95%;
+  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+}
+.carousel-item-header {
+  color: #000000;
+}
+
+.carousel-control-prev {
+  /* background-color: red; */
+}
+
+.carousel-control-next {
+  /* background-color: red; */
+}
+
+.carousel-control-prev-icon {
+}
+
+.carousel-control-next-icon {
+}
+
+.skills-triangle {
+  background-image: linear-gradient(to bottom right, black, blue);
+  background-image: linear-gradient(to bottom right, #44a08d, #093637);
+  opacity: 1;
+  color: white;
+  height: 65vh;
+  position: relative;
+  /* z-index: 1; */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.skills-triangle > hr {
+  background-color: white;
+}
+
+.pyramid-top {
+  text-align: center;
+  height: 35%;
+  position: relative;
+  bottom: 20px;
+}
+
+.pyramid-top-text > hr {
+  background-color: black;
+}
+
+.pyramid-top-contents {
+  display: inline-block;
+  position: absolute;
+  top: 80%;
+  transform: translate(-50%, -50%);
+}
+
+/* #pyramid-top-contents-logo {
+  height: 15%;
+  width: 5%;
+  object-fit: cover;
+} */
+
+.pyramid-mid {
+  text-align: center;
+  position: relative;
+  height: 40%;
+  top: 40px;
+}
+.pyramid-mid-text > hr {
+  padding-top: 0px;
+  width: 10%;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.pyramid-bottom {
+  text-align: center;
+  height: 30%;
+  position: relative;
+  top: 40px;
+}
+
+.pyramid-bottom-text > hr {
+  width: 15%;
+  margin: 0 auto;
+  background-color: black;
+}

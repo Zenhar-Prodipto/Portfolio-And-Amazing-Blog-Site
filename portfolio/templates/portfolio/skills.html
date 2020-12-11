@@ -1,0 +1,155 @@
+{% extends "portfolio/base.html" %} {% load static %} 
+
+
+{% block title %}<title> skills</title>{% endblock %}
+
+{% block content %}
+
+<header class="header-main">
+    <div class="header-image">
+        <img id="img" src="{% static 'portfolio/images/Logo.png' %}">
+    </div>
+
+</header>
+
+
+<div class="skill-header">
+    <h1>Skills</h1>
+</div>
+
+
+<div class="skills">
+    <div class="skills-pyramid-explanation">
+        <ul>
+            <li><span>Top:</span> Has the Potential to be an 'Expert'. My go-to, comfortable stuff.</li>
+            <li><span>Middle:</span> Intermidiate Expertise</li>
+            <li><span>Bottom:</span> Well, kinda novice. But I'm learning.</li>
+        </ul>
+    </div>
+<div id="carousel-for-skills" class="carousel slide" data-ride="false">
+    <!-- <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol> -->
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="carousel-item-header">
+            <h3>Programming Languages</h3>
+        </div>
+        
+        <!-- <img class="d-block w-100" src="{% static 'portfolio/images/logo.png' %}" alt="First slide"> -->
+        <div class="skills-triangle">
+
+            <div class="pyramid-top">
+                <!-- <div class="pyramid-top-text">  
+                <p>Kinda Expert</p>
+                <hr>
+                </div> -->
+                <div class="pyramid-top-contents">
+                    <!-- <img id="pyramid-top-contents-logo" src="{% static 'portfolio/images/python-logo-2.png' %}" alt="python logo"> -->
+                    <p>Python</p>
+                </div>
+            
+            </div>
+            <hr>
+
+            <div class="pyramid-mid">
+                    <div class="pyramid-mid-contents">
+                        <p>JavaScript</p>
+                        <p>Java</p>
+                    </div>
+            </div>
+            <hr>
+
+            <div class="pyramid-bottom">
+
+                    <div class="pyramid-bottom-contents">
+                        <p>C++</p>
+                    </div>
+               
+            </div>
+        
+      </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-item-header">
+            <h3>Frameworks</h3>
+        </div>
+        <!-- <img class="d-block w-100" src="{% static 'portfolio/images/logo.png' %}" alt="Second slide"> -->
+        <div class="skills-triangle">
+            <div class="pyramid-top">
+                <div class="pyramid-top-contents">
+                    <!-- <img id="pyramid-top-contents-logo" src="{% static 'portfolio/images/python-logo-2.png' %}" alt="python logo"> -->
+                    <p>Django</p>
+                    <p>Node(Express.js)</p>
+                </div>
+            
+            </div>
+            <hr>
+
+            <div class="pyramid-mid">
+                    <div class="pyramid-mid-contents">
+                        <p>React.js</p>
+                    </div>
+            </div>
+            <hr>
+
+            <div class="pyramid-bottom">
+                    <div class="pyramid-bottom-contents">
+                        <p>Django Rest Framework</p>
+                    </div>
+            </div>
+        
+      </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-item-header">
+            <h3>Libraries</h3>
+        </div>
+       
+        <div class="skills-triangle">
+            <div class="pyramid-top">
+                <div class="pyramid-top-contents">
+                    <!-- <img id="pyramid-top-contents-logo" src="{% static 'portfolio/images/python-logo-2.png' %}" alt="python logo"> -->
+                    <p>Scikit Learn, Pandas</p>
+                    <p>Seaborn, matplotlib</p>
+                </div>
+            
+            </div>
+            <hr>
+
+            <div class="pyramid-mid">
+            
+                    <div class="pyramid-mid-contents">
+                        <p>NLTK </p>
+                        <p>Tensorflow</p>
+                    </div>
+               
+            </div>
+            <hr>
+
+            <div class="pyramid-bottom"> 
+                    <div class="pyramid-bottom-contents">
+                        <p>Keras</p>
+                </div>
+            </div>
+        
+      </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carousel-for-skills" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-for-skills" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</script>
+
+{% endblock content %}

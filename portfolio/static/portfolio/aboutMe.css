@@ -1,0 +1,6 @@
+.aboutMe-header-main {
+  height: 85vh;
+  background-image: url("/static/portfolio/images/KL.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
