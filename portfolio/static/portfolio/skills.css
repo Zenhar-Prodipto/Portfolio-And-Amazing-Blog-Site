@@ -59,29 +59,35 @@
   padding-right: 5px;
 }
 
-.carousel {
+.skills-carousel {
   padding: 5px;
   height: 95%;
   /* border: 2px rgb(28, 40, 177) solid; */
 }
-.carousel-inner {
+
+/* #skills-carousel {
+  padding: 5px;
+  height: 95%;
+  /* border: 2px rgb(28, 40, 177) solid; */
+/* } */
+.skills-carousel-inner {
   /* border: 2px purple solid; */
   height: 95%;
   padding: 5px;
 }
 
-.carousel-item {
+.skills-carousel-item {
   /* border: 2px green solid; */
   padding: 5px;
   height: 95%;
   /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
 }
-.carousel-item-header {
+.skills-carousel-item-header {
   color: #000000;
 }
 
-.carousel-control-prev {
-  /* background-color: red; */
+#skills-carousel-control-prev {
+  background-color: red;
 }
 
 .carousel-control-next {

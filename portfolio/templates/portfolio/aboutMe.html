@@ -1,8 +1,161 @@
+
+
+
+<!-- .................................................................................... -->
+
+
 {% extends "portfolio/base.html" %} {% load static %} 
 {% block title %} <title>About Me</title> {% endblock %}
 
 {% block content%}
-<div class="aboutMe-header-main">
-    
+
+<div class="aboutMe-text">
+    <h3>About Me</h3>
 </div>
+
+<div class="aboutMe">
+  <div id="carousel-for-aboutMe" class="carousel slide aboutMe-carousel" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-for-aboutMe" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-for-aboutMe" data-slide-to="1"></li>
+      <li data-target="#carousel-for-aboutMe" data-slide-to="2"></li>
+      <li data-target="#carousel-for-aboutMe" data-slide-to="3" ></li>
+      <li data-target="#carousel-for-aboutMe" data-slide-to="4"></li>
+      <li data-target="#carousel-for-aboutMe" data-slide-to="5"></li>
+      <li data-target="#carousel-for-aboutMe" data-slide-to="6"></li>
+    </ol>
+    <div class="carousel-inner aboutMe-carousel-inner">
+      <div class="carousel-item active aboutMe-carousel-item">
+        <div class="aboutMe-carousel-header">
+          <h4>A Bit About Me</h4>
+        </div>
+        <div id="aboutMe-carousel-item-contents-1" class="aboutMe-carousel-item-contents">
+          <p>A CSE graduate, trying to explore this huge paradimn with curiosity. <br> 
+            I absolutely love thinking and coding websites. <br>
+            Enjoy going fullstack. <br>
+            Always Thrilled to learn and implement new things</p>
+        </div>
+      </div>
+
+      
+      <!-- //item2  -->
+      <div class="carousel-item  aboutMe-carousel-item">
+        <div class="aboutMe-carousel-header">
+          <h4>Academic Interests</h4>
+        </div>
+        <div id="aboutMe-carousel-item-contents-2" class="aboutMe-carousel-item-contents">
+          <p>Alright this one is tough. But let me sum up.</p>
+          <ul>
+              <li>Software Engineering</li>
+              <li> Data Science & Machine Learning</li>
+              <li>Data Structures and Algorithms</li>
+              <li>Cloud Computing</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- Item3 -->
+
+      <div class="carousel-item  aboutMe-carousel-item">
+        <div class="aboutMe-carousel-header">
+          <h4>A bit on the programming Languages</h4>
+          
+        </div>
+        <div id="aboutMe-carousel-item-contents-3" class="aboutMe-carousel-item-contents">
+          <p>Well, look I think I'm a <span>Python </span> person. Choosing a programming Language
+            matters to me. Python kind of gives me a good assurance most of the time. Kind of in love with 
+            the language. <br> I've also <i>developed</i> a taste for <span>Javascript</span> recently.
+            <br> Oh and <span>Java</span> my old love!!       
+        </p>
+        </div>
+      </div>
+
+      <!-- Item4  -->
+      <div class="carousel-item  aboutMe-carousel-item">
+        <div class="aboutMe-carousel-header">
+          <h4>A bit on the frameworks</h4>
+         
+        </div>
+        <div id="aboutMe-carousel-item-contents-4" class="aboutMe-carousel-item-contents">
+          <p>I really swing back and forth with <span>Django</span> & <span>Node(Express.js)</span> . <br>
+            I absolutely love both. And recently started liking <span>React.js</span> for front-End. 
+            Would like to work with these more. <br> yah what did you say? Well yah right, I should
+            not be too framework specific :(.     
+       </p>
+        </div>
+      </div>
+
+      <!-- Item5  -->
+
+      <div class="carousel-item  aboutMe-carousel-item">
+        <div class="aboutMe-carousel-header">
+          <h4>Other Interests</h4>
+        </div>
+        <div id="aboutMe-carousel-item-contents-5" class="aboutMe-carousel-item-contents">
+          <p>A lot of things trigger me!</p>
+
+          <ul>
+              <li>Big Bang and This Universe</li>
+              <li>World History & Civilization</li>
+              <li>Philosophy</li>
+              <li>Language & Literature</li>
+              <li>Economics</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- item6  -->
+      <div class="carousel-item  aboutMe-carousel-item">
+        <div class="aboutMe-carousel-header">
+          <h4>{...restOfTheList} :D</h4>
+        </div>
+        <div id="aboutMe-carousel-item-contents-6" class="aboutMe-carousel-item-contents">
+   
+          <ul>
+            <li>Art</li>
+            <li>Music & Films</li>
+            <li>Start Up ideas</li>
+            <li>Sports</li>
+            <li>Science Fictions</li>
+        </ul>
+        </div>
+      </div>
+
+
+      <!-- item7  -->
+
+      <div class="carousel-item  aboutMe-carousel-item">
+        <div class="aboutMe-carousel-header">
+          <h4>Some Important things left to say</h4>
+        </div>
+        <div id="aboutMe-carousel-item-contents-7" class="aboutMe-carousel-item-contents">
+          <h4>Lastly I wanna say two things.</h4>
+          <ul>
+              <li>Drink a lot of water</li>
+              <li>Do check out the other sections of the site.</li>
+          </ul>
+
+          <p>But well no seriously, drink water and do other healthy stuff first you people</p>
+        </div>
+      </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carousel-for-aboutMe" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-for-aboutMe" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+</div>
+
+
 {% endblock %}
+
+
+<!-- .................................................................................... -->

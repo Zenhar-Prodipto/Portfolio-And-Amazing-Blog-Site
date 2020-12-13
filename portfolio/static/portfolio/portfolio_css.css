@@ -15,6 +15,22 @@
   box-sizing: border-box;
 }
 
+#header {
+  border: 1px black solid;
+}
+
+#works {
+  border: 1px black solid;
+}
+
+#aboutMe {
+  border: 1px black solid;
+}
+
+#skills {
+  border: 1px black solid;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
