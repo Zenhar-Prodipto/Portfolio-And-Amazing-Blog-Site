@@ -1,0 +1,98 @@
+.works-text-div {
+  background-color: black;
+  border: 1px orange solid;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  -webkit-clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+  clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+  background-image: url("/static/portfolio/images/blue-galaxy.jpg");
+  animation-name: web-project-text-animation;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+.works-text-div h2 {
+  font-size: 50px;
+}
+
+@keyframes works-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.works-text {
+  background-color: black;
+  /* border: 1px white solid; */
+  display: inline-block;
+  opacity: 0.7;
+}
+
+/* .c {
+  background-color: black;
+  border: 1px white solid;
+  display: inline-block;
+} */
+.web-project-text {
+  animation-name: web-project-text-animation;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+
+@keyframes web-project-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.portfolio-main-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works-bg {
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: black;
+  color: white;
+  height: 100%;
+}
