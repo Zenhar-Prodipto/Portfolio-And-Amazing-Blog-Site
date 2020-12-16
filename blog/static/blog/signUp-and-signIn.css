@@ -1,0 +1,39 @@
+.login-main {
+  /* background-color: blue; */
+  /* text-align: center; */
+}
+
+.header {
+  background-image: url("/static/blog/images/Bojack.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 2;
+}
+
+.reg-main {
+  background-color: #e0c8c97a;
+  /* text-align: center; */
+  width: fit-content;
+  padding: 80px;
+}
+
+/* User Bolg Details Page */
+
+.delete-button {
+  text-align: center;
+  border: aqua solid 3px;
+}
+
+.login-design {
+  background-color: #e0c8c97a;
+  text-align: center;
+  width: fit-content;
+  padding: 80px;
+}
+
+.login-and-reg-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}

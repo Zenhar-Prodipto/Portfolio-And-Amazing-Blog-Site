@@ -10,7 +10,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{% static 'blog/blog_css.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/blog-home.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/blog-details.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/signUp-and-signIn.css' %}">
+
+    <!-- GOOGLE FONTS AND OTHERS  -->
 
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 
@@ -21,7 +25,7 @@
 
 <body>
     <div class="navbar-main">
-        <nav id="topNav" class="navbar navbar-expand-md navbar-light">
+        <nav id="topNav" class="navbar navbar-expand-md ">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'blog:home' %}">
                     <img src="{% static 'portfolio/images/Logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="Nick's Logo">
@@ -50,8 +54,9 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            
         </nav>
+    </div>
 
         {% else %}
 

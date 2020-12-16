@@ -13,11 +13,6 @@
             <h2>{{ i.title }}</h2>
         </a>
         <h5 class="text-muted">{{ i.created_on}}</h5>
-        <!-- {% if i.content|striptags|truncatechars:100 == i.content|striptags|truncatechars:100 %}
-
-        <h4>{{ i.content|striptags|truncatechars:100 }}
-            <a href="{% url 'blog:details' i.id %"></a>read more</h4>
-        {% endif %} -->
 
         <h4>{{ i.content|striptags|truncatechars:100 }}</h4>
     </div>

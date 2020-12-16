@@ -1,38 +1,55 @@
  {% extends "blog/base.html" %} {% load static %} {% block content %}
 
+ <div class="home-blog-main-div">
 
-<h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
 
-<h3 class="text-center mb-5">There are {{ blogs.count }} blog{{ blogs.count|pluralize }} here</h3>
+ <div class="home-headlines">
 
-{% for i in blogs %}
-<!-- <div class="row justify-content-center my-3"> -->
-<!-- <div class="col-md-10"> -->
-<div class="show-blogs">
-    <span id="title">  <a id="link" href="{% url 'blog:details' i.id %}">
-        <h2>{{ i.title }}</h2>
+<h1 id="blogtitle" class="font-weight-bold text-center home-blog-title">Blog</h1>
+
+<h3 class="text-center">There are {{ blogs.count }} blog{{ blogs.count|pluralize }} here</h3>
+
+</div>
+
+{% for blog in blogs %}
+
+<div class="home-show-blogs">
+    <div class="home-each-blog">
+    <div class="blog-title">  <a id="link" href="{% url 'blog:details' blog.id %}">
+        <h2>{{ blog.title }}</h2>
     </a>
-</span>
-    <span id="created-on">
-    <h5 class="text-muted">{{ i.created_on}}</h5>
-</span>
-    <span id="content">
-    <h4>{{ i.content|striptags|truncatechars:100 }}</h4>
-</span>
 </div>
-
-
-<!-- </div>
-</div> -->
-
-<br> {% endfor %}
-
-
-<div class="row justify-content-center my-3">
-    <div>
-        <h5>To see all the blogs <a href="{% url 'blog:all_blogs' %}">click here</a></h5>
+    <div class="created-on">
+    <h5 class="text-muted">{{ blog.created_on}}</h5>
     </div>
+    <div class="blog-content">
+    <h4>{{ blog.content|striptags|truncatechars:60 }}</h4>
+</div>
+</div>
+</div>
+ 
+{% endfor %} 
+    <!-- <div class="click-here">
+        <h5>To see all the blogs <a href="{% url 'blog:all_blogs' %}">click here</a></h5>
+    </div>  -->
+
+
+<div class="category-div">
+    <p>Categories</p>
+    {% for cat in category %}
+    
+<div class="category-show">
+    <ul class="category-ul">
+        <a href=""><li class="category-li">{{cat.name}} </a></li>
+    </ul>
+</div>
+  
+  
+{% endfor %}
+    
+    
 </div>
 
+</div>
 
 {% endblock %}
