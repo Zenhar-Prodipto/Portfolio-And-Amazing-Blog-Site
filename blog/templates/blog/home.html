@@ -24,6 +24,7 @@
     </div>
     <div class="blog-content">
     <h4>{{ blog.content|striptags|truncatechars:60 }}</h4>
+    <a href="{% url 'blog:details' blog.id %}">read more</a>
 </div>
 </div>
 </div>
@@ -34,13 +35,13 @@
     </div>  -->
 
 
-<div class="category-div">
+<div class="home-category-div">
     <p>Categories</p>
     {% for cat in category %}
     
-<div class="category-show">
+<div class="home-category-show ">
     <ul class="category-ul">
-        <a href=""><li class="category-li">{{cat.name}} </a></li>
+        <a class=" home-category-nav-link " href="{% url 'blog:category' cat.id %}"><li class="category-li">{{cat.name}} </a></li>
     </ul>
 </div>
   

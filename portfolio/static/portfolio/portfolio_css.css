@@ -74,6 +74,10 @@ hr {
   padding-top: 15px;
 }
 
+.nav-item .active {
+  border-bottom: 2px solid #f00;
+}
+
 /* ================================================================== */
 
 .header-main {

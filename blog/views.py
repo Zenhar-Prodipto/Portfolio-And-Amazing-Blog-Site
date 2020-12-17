@@ -24,9 +24,17 @@ def details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     return render(request, "blog/details.html", {"blog": blog})
 
-def categories(request,category_id):
+
+def category(request, category_id):
+    blogs = Blog.objects.filter(category=category_id)
     category = get_object_or_404(Category, pk=category_id)
-    return render(request, "blog/category.html", {"category":category})
+    all_category = Category.objects.all()
+    return render(
+        request,
+        "blog/category.html",
+        {"category": category, "blogs": blogs, "all_category": all_category},
+    )
+
 
 # Shob blog dekha jaabe eikhane descending order e
 def all_blogs(request):

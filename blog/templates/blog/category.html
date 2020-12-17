@@ -1,5 +1,39 @@
 {% extends "blog/base.html" %} {% load static %} {% block content %}
 
+<div class="category-header-div">
+    <h5 class="category-header-text">Find All the {{category.name}} Related Blogs Here</h5>
+</div>
 
+{% for blog in blogs %}
 
+<div class="home-show-blogs">
+    <div class="home-each-blog">
+    <div class="blog-title">  <a id="link" href="{% url 'blog:details' blog.id %}">
+        <h2>{{ blog.title }}</h2>
+    </a>
+</div>
+    <div class="created-on">
+    <h5 class="text-muted">{{ blog.created_on}}</h5>
+    </div>
+    <div class="blog-content">
+    <!-- <h4>{{ blog.content|striptags|truncatechars:60 }}</h4> -->
+    <h4>{{ blog.content|striptags| truncatechars:60}}</h4>
+    <a href="{% url 'blog:details' blog.id %}">read more</a>
+</div>
+</div>
+</div>
+{% endfor %} 
+
+<div class="category-category-div">
+    <p class="explore-other-categories-text">Explore Other Categories</p>
+    {% for cat in all_category %}
+    
+<div class="category-category-show">
+    <ul class="category-category-ul">
+        <a class=" category-category-nav-link nav-link" href="{% url 'blog:category' cat.id %}"><li class="category-category-li">{{cat.name}} </a></li>
+    </ul>
+</div>
+
+  {% endfor %}
+</div>
 {% endblock %}
