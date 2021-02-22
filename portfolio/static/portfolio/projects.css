@@ -96,3 +96,103 @@
   color: white;
   height: 100%;
 }
+
+.web-project-card {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 18rem;
+}
+
+.web-project-card-image {
+  height: 300px;
+  width: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.web-project-card-body {
+  height: 250px;
+}
+
+.web-project-card-title {
+  height: 10%;
+  height: fit-content;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left: 1%;
+}
+
+.web-project-card-text {
+  height: 35%;
+  /* border-bottom: 1px solid white; */
+  margin-bottom: 10%;
+  padding-left: 1%;
+}
+
+.web-project-card-url {
+  padding-bottom: 0%;
+  padding-left: 1%;
+}
+
+.ml-projects-text {
+  padding-bottom: 22px;
+  animation-name: ml-projects-text-animation;
+  animation-duration: 2s;
+}
+
+@keyframes ml-projects-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.ml-projects-card {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 18rem;
+}
+
+.ml-projects-card-body {
+  height: 370px;
+}
+
+.ml-projects-card-image {
+  height: 300px;
+  width: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ml-projects-card-title {
+  height: 22%;
+  border-bottom: 1px solid white;
+  padding-left: 1%;
+  padding-top: 1%;
+}
+
+.ml-projects-card-text {
+  height: 35%;
+  border-bottom: 1px solid white;
+  margin-bottom: 5%;
+  padding-left: 1%;
+}
+.ml-projects-card-url {
+  padding-left: 1%;
+}

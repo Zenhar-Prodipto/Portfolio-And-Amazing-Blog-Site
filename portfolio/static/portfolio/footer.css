@@ -55,6 +55,10 @@
   font-size: 28px;
 }
 
+.box-2-skills ul {
+  display: inline-block;
+}
+
 .box3 {
   color: white;
   flex: 1;

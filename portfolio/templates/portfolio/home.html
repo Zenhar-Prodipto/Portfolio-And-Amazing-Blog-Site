@@ -29,7 +29,7 @@
 
 </div>
 
-<!-- WORKS  -->
+<!-- ====================================== PROJECTS  ================================================== -->
 
 <div id='projects'  class="works-text-div">
   <h2 class="works-text">Here're my Works</h2>
@@ -48,23 +48,21 @@
 <div class="row webProject-row">
     {% for project in web_projects %}
 <div class="col-lg-3 col-md-6 ">
-<div class="card" style="width:18rem ">
-    <img src="{{ project.image.url }}" class="portfolio-image"> 
-    <div class="card-body">
-      <h5 class="card-title"><strong>{{project.title}}</strong></h5>
+<div class="card web-project-card">
+    <img src="{{ project.image.url }}" class="web-project-card-image"> 
+    <div class="web-project-card-body">
+      <h5 class="web-project-card-title"><strong>{{project.title}}</strong></h5>
       <hr>
 
-      <p class="card-text">{{project.descriptions}}</p>
+      <p class="web-project-card-text">{{project.descriptions}}</p>
       
       <!-- {{project.descriptions|safe|truncatewords:'10'|linebreaks}} -->
-  
-     
       <hr>
         {% if project.url %}
-        <p class="card-text"> <a href="{{project.url }}">{{project.url}}</a> </p>
+        <p class="web-project-card-url"> <a href="{{project.url }}">{{project.url}}</a> </p>
 
          {% else %}
-        <p class="card-text">No URL yet.</p> -->
+        <p class="web-project-card-url">No URL yet.</p> -->
             
         {% endif %}
         
@@ -76,24 +74,24 @@
 </div>
 
 <hr>
-<h2 class="portfolio-text-div" id="portfolio-margin" >Machine Learning Projects</h2>
+<h2 class="ml-projects-text" id="portfolio-margin" >Machine Learning Projects</h2>
 <hr style="margin-bottom: 10px;">
 
 <div class="row">
     {% for project in ml_projects %}
 <div class="col-lg-3 col-md-6 ">
-<div class="card" style="width: 18rem;">
-    <img src="{{ project.image.url }}" class="portfolio-image"> 
-    <div class="card-body">
-      <h5 class="card-title"><strong>{{project.title}}</strong></h5>
+<div class="card ml-projects-card" >
+    <img src="{{ project.image.url }}" class="ml-projects-card-image"> 
+    <div class="ml-projects-card-body">
+      <h5 class="ml-projects-card-title"><strong>{{project.title}}</strong></h5>
       <hr>
-      <p class="card-text">{{project.descriptions}}</p>
+      <p class="ml-projects-card-text">{{project.descriptions}}</p>
       <hr>
         {% if project.url %}
-        <p class="card-text"> <a href="{{project.url }}">{{project.url}}</a> </p>
+        <p class="ml-projects-card-url"> <a href="{{project.url }}">{{project.url}}</a> </p>
 
         {% else %}
-        <p class="card-text">No URL yet.</p>
+        <p class="ml-projects-card-url">No URL yet.</p>
             
         {% endif %}
 
