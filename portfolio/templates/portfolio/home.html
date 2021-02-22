@@ -16,9 +16,9 @@
       <h6>Find out about my projects, skills and a thing or two about my academic and other interests.</h6>
       <div class="urls">
       <p> 
-      <span><a href="{% url 'portfolio:home' %}"> Projects</a></span>: To Checkout My Projects. <br>
-      <span><a href="{% url 'portfolio:aboutMe' %}">about Me</a></span>: To Checkout on bit on my interests and stuff. <br>
-      <span><a href="{% url 'portfolio:skills' %}"> Skills</a></span>: To Checkout My skills.
+      <span class="urlSpans"><a  href="#projects"> Projects</a></span>: To Checkout My Projects. <br>
+      <span class="urlSpans"><a href="#aboutMe">about Me</a></span>: To Checkout on bit on my interests and stuff. <br>
+      <span class="urlSpans"><a href="#skills"> Skills</a></span>: To Checkout My skills.
       </p>
       <p>Follow my tech blogs here:  <span><a href="{% url 'blog:home' %}"> Blog</a></span></p>
       
@@ -30,7 +30,8 @@
 </div>
 
 <!-- WORKS  -->
-<div class="works-text-div">
+
+<div id='projects'  class="works-text-div">
   <h2 class="works-text">Here're my Works</h2>
 </div>
 
@@ -109,10 +110,10 @@
 
 <!-- ABOUT ME SECTION  -->
 
-<div class="aboutMe-text-div">
+<div id='aboutMe' class="aboutMe-text-div">
   <h3 class="aboutMe-text">About Me</h3>
 </div>
-<div id="aboutMe" >
+<div id="aboutMe-section" >
 
 <div class="aboutMe">
   <div class="aboutMe-bg"> </div>
@@ -145,7 +146,7 @@
         <div class="aboutMe-carousel-header">
           <h4>Academic Interests</h4>
         </div>
-        <div id="aboutMe-carousel-item-contents-2" class="aboutMe-carousel-item-contents">
+        <div id="aboutMe-carousel-item-contents-2" class="aboutMe-carousel-item-contents aboutMe-carousel-item-contents">
           <p>Alright this one is tough. But let me sum up.</p>
           <ul>
               <li>Software Engineering</li>
@@ -233,7 +234,7 @@
           <h4>Some Important things left to say</h4>
         </div>
         <div id="aboutMe-carousel-item-contents-7" class="aboutMe-carousel-item-contents">
-          <h4>Lastly I wanna say two things.</h4>
+          <h4 class="aboutMe-carousel-item-contents-7-text">Lastly I wanna say two things.</h4>
           <ul>
               <li>Drink a lot of water</li>
               <li>Do check out the other sections of the site.</li>
@@ -262,9 +263,9 @@
 <!-- SKILLS SECTION  -->
 
 
-<div id="skills">
+<div id="skills-section">
 
-<div class="skills-text-div">
+<div id="skills" class="skills-text-div">
   <h3 class="skills-text">Skills</h3> 
 </div>
 
@@ -402,4 +403,13 @@
 
 </div>
 
+<script>     
+  $function(){
+    $(".urlSpans").on("click",()=>{
+      $("html,body").animate({
+        scrollTop:$($.attr(this,'href')).offset().top
+      },100)
+    })
+  }
+    </script>
 {% endblock %}

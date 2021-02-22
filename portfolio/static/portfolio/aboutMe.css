@@ -147,6 +147,9 @@
   font-weight: bolder;
 }
 
+.aboutMe-carousel-item-contents li {
+  padding-left: 0px;
+}
 #aboutMe-carousel-item-contents-1 p {
   position: absolute;
   display: inline-block;
@@ -162,6 +165,13 @@
   left: 30px;
 }
 
+.aboutMe-carousel-item-contents ul {
+  display: inline-block;
+  text-align: start;
+  /* text-align: center; */
+  list-style-position: inside;
+}
+
 #aboutMe-carousel-item-contents-2 {
   position: absolute;
   display: inline-block;
@@ -170,6 +180,10 @@
   transform: translate(-20%, 20%);
   font-size: 1.2em;
   line-height: 1.8em;
+}
+
+#aboutMe-carousel-item-contents-2 > ul {
+  padding-left: 0px;
 }
 
 #aboutMe-carousel-item-contents-3 {
@@ -220,4 +234,9 @@
   transform: translate(-20%, 20%);
   font-size: 1.2em;
   line-height: 1.8em;
+}
+
+.aboutMe-carousel-item-contents-7-text {
+  position: relative;
+  right: 40px;
 }
