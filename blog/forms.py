@@ -1,15 +1,7 @@
 from django.forms import ModelForm
 from django import forms
-from .models import UserBlog
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth.models import User
-
-
-# Form class for userBlog model
-class UserBlogForm(ModelForm):
-    class Meta:
-        model = UserBlog
-        fields = ["title", "content", "images"]
 
 
 # Login Form

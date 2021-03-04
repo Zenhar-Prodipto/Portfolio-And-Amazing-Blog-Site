@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "portfolio",
+    "ckeditor",
+    "ckeditor_uploader",
 ]
+
+CKEDITOR_UPLOAD_PATH = "blog/blog_post_images"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

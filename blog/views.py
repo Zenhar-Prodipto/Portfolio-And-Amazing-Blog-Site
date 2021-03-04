@@ -6,10 +6,9 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
-from .forms import UserBlogForm, LoginForm, RegistrationForm
-from .models import Blog
-from .models import UserBlog
-from .models import Category
+from .forms import LoginForm, RegistrationForm
+from .models import Blog, Category
+
 
 # Create your views here.
 def home(request):
