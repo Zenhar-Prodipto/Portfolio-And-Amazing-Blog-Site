@@ -8,7 +8,7 @@ It's a TWO IN ONE!!! You can check out my projects and skillsets and have a look
 
 # Blog
 
-<img src="SellMate/images/Blog.png">
+<img src="portfolio_blog_project/images/Blog.png">
 
 # Features
 
