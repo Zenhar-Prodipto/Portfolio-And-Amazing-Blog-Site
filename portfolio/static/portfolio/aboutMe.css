@@ -153,8 +153,8 @@
 #aboutMe-carousel-item-contents-1 p {
   position: absolute;
   display: inline-block;
-  top: 5%;
-  left: 25%;
+  top: 0%;
+  left: 30%;
   transform: translate(-20%, 20%);
   font-size: 1.2em;
   line-height: 1.8em;
@@ -238,5 +238,10 @@
 
 .aboutMe-carousel-item-contents-7-text {
   position: relative;
-  right: 40px;
+  right: 50px;
+}
+
+.aboutMe-carousel-item-contents-7-text > ul {
+  position: relative;
+  right: 50px;
 }
