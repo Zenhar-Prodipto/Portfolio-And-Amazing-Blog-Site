@@ -20,12 +20,30 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "=5h!tmsc5%ilt4tne7cfdi5kmy@7yv&d^6i$93c9!(vw56lrue"
+# SECRET KEYS
+
+import json
+import os
+from django.core.exceptions import ImproperlyConfigured
+
+with open(os.path.join(BASE_DIR, "secrets.json")) as secrets_file:
+    secrets = json.load(secrets_file)
+
+
+def get_secret(setting, secrets=secrets):
+    """Get secret setting or fail with ImproperlyConfigured"""
+    try:
+        return secrets[setting]
+    except KeyError:
+        raise ImproperlyConfigured("Set the {} setting".format(setting))
+
+
+SECRET_KEY = get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["qurantinescrawl.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
@@ -47,6 +65,7 @@ CKEDITOR_UPLOAD_PATH = "blog/blog_post_images"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -76,28 +95,10 @@ TEMPLATES = [
 WSGI_APPLICATION = "portfolio_blog_project.wsgi.application"
 
 
-# SECRET KEYS
-
-import json
-import os
-from django.core.exceptions import ImproperlyConfigured
-
-with open(os.path.join(BASE_DIR, "secrets.json")) as secrets_file:
-    secrets = json.load(secrets_file)
-
-
-def get_secret(setting, secrets=secrets):
-    """Get secret setting or fail with ImproperlyConfigured"""
-    try:
-        return secrets[setting]
-    except KeyError:
-        raise ImproperlyConfigured("Set the {} setting".format(setting))
-
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-SECRET_KEY = get_secret("SECRET_KEY")
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
@@ -147,5 +148,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+# STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
