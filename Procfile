@@ -1,1 +1,1 @@
-web: gunicorn socialBlog.wsgi --log-file -
+web: gunicorn portfolio_blog_project.wsgi --log-file -
