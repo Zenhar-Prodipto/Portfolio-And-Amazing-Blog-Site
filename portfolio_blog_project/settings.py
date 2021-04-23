@@ -22,23 +22,30 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET KEYS
 
-import json
-import os
-from django.core.exceptions import ImproperlyConfigured
+import environ
 
-with open(os.path.join(BASE_DIR, "secrets.json")) as secrets_file:
-    secrets = json.load(secrets_file)
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
+SECRET_KEY = env("SECRET_KEY")
+
+# import json
+# import os
+# from django.core.exceptions import ImproperlyConfigured
+
+# with open(os.path.join(BASE_DIR, "secrets.json")) as secrets_file:
+#     secrets = json.load(secrets_file)
 
 
-def get_secret(setting, secrets=secrets):
-    """Get secret setting or fail with ImproperlyConfigured"""
-    try:
-        return secrets[setting]
-    except KeyError:
-        raise ImproperlyConfigured("Set the {} setting".format(setting))
+# def get_secret(setting, secrets=secrets):
+#     """Get secret setting or fail with ImproperlyConfigured"""
+#     try:
+#         return secrets[setting]
+#     except KeyError:
+#         raise ImproperlyConfigured("Set the {} setting".format(setting))
 
 
-SECRET_KEY = get_secret("SECRET_KEY")
+# SECRET_KEY = get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -74,6 +81,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+
 ROOT_URLCONF = "portfolio_blog_project.urls"
 
 TEMPLATES = [
@@ -102,9 +110,9 @@ WSGI_APPLICATION = "portfolio_blog_project.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": get_secret("DB_NAME"),
-        "USER": get_secret("DB_USER"),
-        "PASSWORD": get_secret("DB_PASSWORD"),
+        "NAME": env("DB_NAME"),
+        "USER": env("DB_USER"),
+        "PASSWORD": env("DB_PASSWORD"),
         "HOST": "localhost",
         "PORT": "5433",
     }

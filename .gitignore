@@ -5,3 +5,6 @@ datadump.json
 secrets.json
 metaInfo.txt
 runtime.txt
+# Environments
+.env
+
