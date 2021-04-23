@@ -1,0 +1,203 @@
+.works-text-div {
+  background-color: black;
+  border: 1px orange solid;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  -webkit-clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+  clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+  background-image: url("/static/portfolio/images/blue-galaxy.jpg");
+  animation-name: web-project-text-animation;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+.works-text-div h2 {
+  font-size: 50px;
+}
+
+@keyframes works-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.works-text {
+  background-color: black;
+  /* border: 1px white solid; */
+  display: inline-block;
+  opacity: 0.7;
+}
+
+/* .c {
+  background-color: black;
+  border: 1px white solid;
+  display: inline-block;
+} */
+.web-project-text {
+  animation-name: web-project-text-animation;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+
+@keyframes web-project-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.portfolio-main-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works-bg {
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: black;
+  color: white;
+  height: 100%;
+}
+
+.web-project-card {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 18rem;
+}
+
+.web-project-card-image {
+  height: 300px;
+  width: 300px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.web-project-card-body {
+  height: 250px;
+}
+
+.web-project-card-title {
+  height: 10%;
+  height: fit-content;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left: 1%;
+  text-decoration: none;
+}
+
+.web-project-card-title a {
+  color: white;
+}
+
+.web-project-card-text {
+  height: 35%;
+  /* border-bottom: 1px solid white; */
+  margin-bottom: 10%;
+  padding-left: 1%;
+}
+
+.web-project-card-url {
+  padding-bottom: 0%;
+  padding-left: 1%;
+}
+
+.ml-projects-text {
+  padding-bottom: 22px;
+  animation-name: ml-projects-text-animation;
+  animation-duration: 2s;
+}
+
+@keyframes ml-projects-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.ml-projects-card {
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 18rem;
+}
+
+.ml-projects-card-body {
+  height: 370px;
+}
+
+.ml-projects-card-image {
+  height: 300px;
+  width: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.ml-projects-card-title {
+  height: 22%;
+  border-bottom: 1px solid white;
+  padding-left: 1%;
+  padding-top: 1%;
+}
+
+.ml-projects-card-text {
+  height: 35%;
+  border-bottom: 1px solid white;
+  margin-bottom: 5%;
+  padding-left: 1%;
+}
+.ml-projects-card-url {
+  padding-left: 1%;
+}
