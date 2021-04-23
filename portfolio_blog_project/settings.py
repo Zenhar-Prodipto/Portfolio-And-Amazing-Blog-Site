@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,7 +36,7 @@ if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
 # SECRET_KEY = os.getenv("SECRET_KEY")
-SECRET_KEY = "2l06u4k6jt1zhyih6%8tzw6#4b9joa0m*&l!4ml3sh76&59afz"
+SECRET_KEY = os.getenv("SECRET_KEY")
 # env = environ.Env()
 # environ.Env.read_env()
 # SECRET_KEY = env("SECRET_KEY")
@@ -129,6 +130,8 @@ DATABASES = {
     }
 }
 
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES["default"].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -169,7 +172,8 @@ STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # MEDIA
 MEDIA_URL = "/media/"
