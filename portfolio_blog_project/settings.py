@@ -22,10 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET KEYS
 
-import environ
-
 # Initialise environment variables
-
+import environ
 import dotenv
 
 # this line is already in your settings.py
@@ -35,7 +33,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
-SECRET_KEY = os.getenv("SECRET_KEY")
+
+# SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = "2l06u4k6jt1zhyih6%8tzw6#4b9joa0m*&l!4ml3sh76&59afz"
 # env = environ.Env()
 # environ.Env.read_env()
 # SECRET_KEY = env("SECRET_KEY")
