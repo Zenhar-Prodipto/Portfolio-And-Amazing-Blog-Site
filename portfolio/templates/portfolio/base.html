@@ -83,11 +83,12 @@
         <div class="footer-main">
         <div class="footer-flex">
         <div class="box1">
-           
+            <!-- <img id="footer-img" style="height:15vh;" src="{% static 'portfolio/images/Logo.png' %}"> -->
             <h4  class='footer-headers'>About Me</h4>
+            <div class="box-1-lists">
             <p>A Computer Science graduate trying explore this massive paradigm with curiosity.</p>
             <h4>Academic Interests:</h4>
-            <ul>
+            <ul id="footer-academic-interests-list">
                 <li>Web Development</li>
                 <li>Data Science</li>
                 <li>Machine Learning</li>
@@ -102,27 +103,28 @@
                 <li>Paintings, Music & Films</li>
             </ul>
         </div>
+        </div>
         
         <div class="box2">
-            <h4 class='footer-headers'>Skills</h4>
+            <h4 id="box-2-footer-header" class='footer-headers'>Skills</h4>
             <div class="box-2-skills">
             
             <h5>Languages</h5>
-            <ul>
+            <ul id="footer-languages-list">
                 <li>Python</li>
                 <li>Javascript</li>
                 <li>Java</li>
             </ul>
         
             <h5 class="footer-frameworks">Frameworks</h5>
-            <ul>
+            <ul id="footer-frameworks-list">
                 <li>Node(ExpressJs)</li>
-                <li>Django Web Framework</li>
+                <li >Django</li>
                 <li>ReactJs</li>
             </ul>
 
             <h5>Libraries</h5>
-            <ul>
+            <ul id='footer-libraries-list'>
                 <li>Scikit-Learn</li>
                 <li>Pandas</li>
                 <li>Tensorflow</li>
@@ -145,7 +147,7 @@
         </div>
         
         <div class="big-Thank-You">
-            <h2>A Big Thank You to you!</h2>
+            <h2 class="big-Thank-You-text">A Big Thank You to you!</h2>
         </div>
         </div>
               

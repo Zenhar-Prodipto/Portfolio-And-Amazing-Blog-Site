@@ -6,16 +6,16 @@
 
 {% for blog in blogs %}
 
-<div class="home-show-blogs">
-    <div class="home-each-blog">
-    <div class="blog-title">  <a id="link" href="{% url 'blog:details' blog.id %}">
-        <h2>{{ blog.title }}</h2>
+<div class="category-show-blogs">
+    <div class="category-each-blog">
+    <div class="category-blog-title">  <a id="link" href="{% url 'blog:details' blog.id %}">
+        <h2 class="category-blog-title">{{ blog.title }}</h2>
     </a>
 </div>
-    <div class="created-on">
-    <h5 class="text-muted">{{ blog.created_on}}</h5>
+    <div class="category-created-on">
+    <h5 class="text-muted category-created-on">{{ blog.created_on}}</h5>
     </div>
-    <div class="blog-content">
+    <div class="category-blog-content">
     <!-- <h4>{{ blog.content|striptags|truncatechars:60 }}</h4> -->
     <h4>{{ blog.content|striptags| truncatechars:60}}</h4>
     <a href="{% url 'blog:details' blog.id %}">read more</a>
@@ -24,8 +24,12 @@
 </div>
 {% endfor %} 
 
-<div class="category-category-div">
-    <p class="explore-other-categories-text">Explore Other Categories</p>
+<div class="category-category-wrap">
+    <p class="category-categories-text">Categories</p>
+
+    <ul class="category-ul">
+        <a class=" category-category-nav-link "href="{% url 'blog:home' %}"><li class="category-li">All</a></li>
+    </ul>
     {% for cat in all_category %}
     
 <div class="category-category-show">

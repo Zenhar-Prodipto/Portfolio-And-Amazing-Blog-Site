@@ -26,18 +26,18 @@
 
 <body>
     <div class="navbar-main">
-        <nav id="topNav" class="navbar navbar-expand-md ">
+        <nav id="topNav" class="navbar navbar-expand-md navbar-dark ">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'blog:home' %}">
                     <img src="{% static 'portfolio/images/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="Nick's Logo">
                     <span>Zen Blog</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon navbar-toggler-right"></span>
       </button>
       
-      {% if user.is_authenticated %}
-                <div class="collapse navbar-collapse text-center" id="navbarNav">
+
+                <div class=" portfolio-nav collapse navbar-collapse text-center" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li>
                             <a role="button" href="{% url 'portfolio:home' %}" class="btn btn-primary">Portfolio</a>
@@ -48,19 +48,8 @@
         </nav>
     </div>
 
-        {% else %}
 
-        <div class="collapse navbar-collapse text-center" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li>
-                    <a role="button" href="{% url 'portfolio:home' %}" class="btn btn-primary">Portfolio</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    </nav>
-    </div>
-    {% endif %}
+
     <!-- <div class="container"> -->
 
     {% block content %}{% endblock %}

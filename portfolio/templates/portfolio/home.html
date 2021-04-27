@@ -17,7 +17,7 @@
       <div class="urls">
       <p> 
       <span class="urlSpans"><a  href="#projects"> Projects</a></span>: To Checkout My Projects. <br>
-      <span class="urlSpans"><a href="#aboutMe">about Me</a></span>: To Checkout on bit on my interests and stuff. <br>
+      <span class="urlSpans"><a href="#aboutMe">about Me</a></span>: To Checkout my academic interests. <br>
       <span class="urlSpans"><a href="#skills"> Skills</a></span>: To Checkout My skills.
       </p>
       <p>Follow my tech blogs here:  <span><a href="{% url 'blog:home' %}"> Blog</a></span></p>
@@ -48,8 +48,8 @@
 
 <div data-aos="zoom-in" class="row webProject-row">
     {% for project in web_projects %}
-<div class="col-lg-3 col-md-6 ">
-<div class="card web-project-card">
+<div class=" web-project-column col-lg-3 col-md-6">
+<div id='web-project-card' class="card web-project-card">
     <img src="{{ project.image.url }}" class="web-project-card-image"> 
     <div  class="web-project-card-body">
       <h5 class="web-project-card-title"><strong> <a href="{{project.url}}">{{project.title}}</a></strong></h5>
@@ -80,7 +80,7 @@
 
 <div data-aos="zoom-in" class="row">
     {% for project in ml_projects %}
-<div class="col-lg-3 col-md-6 ">
+<div class="ml-project-column col-lg-3 col-md-6 ">
 <div class="card ml-projects-card" >
     <img src="{{ project.image.url }}" class="ml-projects-card-image"> 
     <div class="ml-projects-card-body">
@@ -240,7 +240,7 @@ data-aos-easing="ease-in-sine" class="aboutMe">
         </div>
         <div id="aboutMe-carousel-item-contents-7" class="aboutMe-carousel-item-contents">
           <h4 class="aboutMe-carousel-item-contents-7-text">Lastly I wanna say two things.</h4>
-          <ul>
+          <ul class="aboutMe-carousel-item-contents-7-text-ul">
               <li>Drink a lot of water</li>
               <li>Do check out the other sections of the site.</li>
           </ul>
@@ -375,7 +375,8 @@ data-aos-easing="ease-in-sine" class="skills">
           <div class="pyramid-top">
               <div class="pyramid-top-contents">
                   <!-- <img id="pyramid-top-contents-logo" src="{% static 'portfolio/images/python-logo-2.png' %}" alt="python logo"> -->
-                  <p>Scikit Learn, Pandas</p>
+                  <p>Pandas</p>
+                  <p>Scikit Learn</p>
                   <p>Seaborn, matplotlib</p>
               </div>
           

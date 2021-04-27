@@ -4,185 +4,580 @@
   box-sizing: border-box;
 }
 
-.skills-text-div {
-  background-color: black;
-  /* border: 1px orange solid; */
-  position: relative;
-  text-align: center;
-  margin-bottom: 10px;
-  color: white;
-  -webkit-clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
-  clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
-  background-image: url("/static/portfolio/images/blue-galaxy.jpg");
-  animation-name: skills-text-animation;
-  animation-delay: 1s;
-  animation-duration: 2s;
-}
-.skills-text-div h3 {
-  font-size: 50px;
-}
+/* ================================================================== */
+/* For Big Screens */
 
-@keyframes skills-text-animation {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
+@media (min-width: 992px) {
+  .skills-text-div {
+    background-color: black;
+    /* border: 1px orange solid; */
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    -webkit-clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+    clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+    background-image: url("/static/portfolio/images/blue-galaxy.jpg");
+    animation-name: skills-text-animation;
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+  .skills-text-div h3 {
+    font-size: 50px;
   }
 
-  25% {
-    opacity: 0.25;
+  @keyframes skills-text-animation {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    25% {
+      opacity: 0.25;
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: translateX(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
   }
 
-  50% {
+  .skills-text {
+    /* background-color: black; */
+    /* border: 1px white solid; */
+    display: inline-block;
     opacity: 0.5;
-    transform: translateX(20px);
   }
 
-  100% {
+  .skills {
+    height: 85vh;
+    /* border: 1px red solid; */
+    text-align: center;
+    /* Other good colors: #093028 #237A57 */
+    background-image: url("/static/portfolio/images/blue-galaxy.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: top;
     opacity: 1;
-    transform: translate(0);
+    color: white;
+    position: relative;
+  }
+  .skills > h3 {
+    padding-top: 5px;
+  }
+
+  .skills-pyramid-explanation {
+    position: absolute;
+    right: 80px;
+    top: 60px;
+    text-align: start;
+    font-size: 1em;
+  }
+  .skills-pyramid-explanation span {
+    color: white;
+    font-weight: bold;
+    padding-right: 5px;
+    font-size: 1.2rem;
+  }
+
+  .skills-carousel {
+    padding: 5px;
+    height: 95%;
+    /* border: 2px rgb(28, 40, 177) solid; */
+  }
+
+  /* #skills-carousel {
+    padding: 5px;
+    height: 95%;
+    /* border: 2px rgb(28, 40, 177) solid; */
+  /* } */
+  .skills-carousel-inner {
+    /* border: 2px purple solid; */
+    height: 95%;
+    padding: 5px;
+  }
+
+  .skills-carousel-item {
+    /* border: 2px green solid; */
+    padding: 5px;
+    height: 95%;
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+  }
+  .skills-carousel-item-header {
+    color: white;
+    margin-bottom: 25px;
+  }
+
+  #skills-carousel-control-prev {
+    background-color: red;
+  }
+
+  .carousel-control-next {
+    /* background-color: red; */
+  }
+
+  .carousel-control-prev-icon {
+  }
+
+  .carousel-control-next-icon {
+  }
+
+  .skills-triangle {
+    /* background-image: url("/static/portfolio/images/blue-galaxy.png"); */
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    height: 65vh;
+    position: relative;
+    /* z-index: 1; */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .skills-triangle > hr {
+    background-color: white;
+  }
+
+  .pyramid-top {
+    text-align: center;
+    height: 35%;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .pyramid-top-text > hr {
+    background-color: black;
+  }
+
+  .pyramid-top-contents {
+    display: inline-block;
+    position: absolute;
+    top: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* #pyramid-top-contents-logo {
+    height: 15%;
+    width: 5%;
+    object-fit: cover;
+  } */
+
+  .pyramid-mid {
+    text-align: center;
+    position: relative;
+    height: 40%;
+    top: 40px;
+  }
+  .pyramid-mid-text > hr {
+    padding-top: 0px;
+    width: 10%;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  .pyramid-bottom {
+    text-align: center;
+    height: 30%;
+    position: relative;
+    top: 40px;
+  }
+
+  .pyramid-bottom-text > hr {
+    width: 15%;
+    margin: 0 auto;
+    background-color: black;
   }
 }
 
-.skills-text {
-  /* background-color: black; */
-  /* border: 1px white solid; */
-  display: inline-block;
-  opacity: 0.5;
-}
+/* =========================================================================================*/
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* =========================================================================================  */
+/* ========================================================================================= */
+/* ==========================================================================================*/
+/* For Tabs */
 
-.skills {
-  height: 95vh;
-  /* border: 1px red solid; */
-  text-align: center;
-  /* Other good colors: #093028 #237A57 */
-  background-image: url("/static/portfolio/images/blue-galaxy.jpg");
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: top;
-  opacity: 1;
-  color: white;
-  position: relative;
-}
-.skills > h3 {
-  padding-top: 5px;
-}
+@media (min-width: 768px) and (max-width: 991px) {
+  .skills-text-div {
+    background-color: black;
+    /* border: 1px orange solid; */
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    -webkit-clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+    clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+    background-image: url("/static/portfolio/images/blue-galaxy.jpg");
+    animation-name: skills-text-animation;
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+  .skills-text-div h3 {
+    font-size: 50px;
+  }
 
-.skills-pyramid-explanation {
-  position: absolute;
-  right: 80px;
-  top: 60px;
-  text-align: start;
-}
-.skills-pyramid-explanation span {
-  color: white;
-  font-weight: bold;
-  padding-right: 5px;
-  font-size: 20px;
-}
+  @keyframes skills-text-animation {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
 
-.skills-carousel {
+    25% {
+      opacity: 0.25;
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: translateX(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+  .skills-text {
+    /* background-color: black; */
+    /* border: 1px white solid; */
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  .skills {
+    height: 95vh;
+    /* border: 1px red solid; */
+    text-align: center;
+    /* Other good colors: #093028 #237A57 */
+    background-image: url("/static/portfolio/images/blue-galaxy.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: top;
+    opacity: 1;
+    color: white;
+    position: relative;
+  }
+  .skills > h3 {
+    padding-top: 5px;
+  }
+
+  .skills-pyramid-explanation {
+    position: absolute;
+    left: 63%;
+    top: 60px;
+    text-align: start;
+    font-size: 0.8rem;
+  }
+  .skills-pyramid-explanation span {
+    color: white;
+    font-weight: bold;
+    padding-right: 5px;
+    font-size: 1rem;
+  }
+
+  .skills-carousel {
+    padding: 5px;
+    height: 95%;
+    /* border: 2px rgb(28, 40, 177) solid; */
+  }
+
+  /* #skills-carousel {
   padding: 5px;
   height: 95%;
   /* border: 2px rgb(28, 40, 177) solid; */
-}
+  /* } */
+  .skills-carousel-inner {
+    /* border: 2px purple solid; */
+    height: 95%;
+    padding: 5px;
+  }
 
-/* #skills-carousel {
-  padding: 5px;
-  height: 95%;
-  /* border: 2px rgb(28, 40, 177) solid; */
-/* } */
-.skills-carousel-inner {
-  /* border: 2px purple solid; */
-  height: 95%;
-  padding: 5px;
-}
+  .skills-carousel-item {
+    /* border: 2px green solid; */
+    padding: 5px;
+    height: 95%;
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+  }
+  .skills-carousel-item-header {
+    color: white;
+    margin-bottom: 25px;
+  }
 
-.skills-carousel-item {
-  /* border: 2px green solid; */
-  padding: 5px;
-  height: 95%;
-  /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
-}
-.skills-carousel-item-header {
-  color: white;
-  margin-bottom: 25px;
-}
+  #skills-carousel-control-prev {
+    background-color: red;
+  }
 
-#skills-carousel-control-prev {
-  background-color: red;
-}
+  .carousel-control-next {
+    /* background-color: red; */
+  }
 
-.carousel-control-next {
-  /* background-color: red; */
-}
+  .carousel-control-prev-icon {
+  }
 
-.carousel-control-prev-icon {
-}
+  .carousel-control-next-icon {
+  }
 
-.carousel-control-next-icon {
-}
+  .skills-triangle {
+    /* background-image: url("/static/portfolio/images/blue-galaxy.png"); */
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    height: 65vh;
+    position: relative;
+    /* z-index: 1; */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
 
-.skills-triangle {
-  /* background-image: url("/static/portfolio/images/blue-galaxy.png"); */
-  background-color: black;
-  opacity: 0.7;
-  color: white;
-  height: 65vh;
-  position: relative;
-  /* z-index: 1; */
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+  .skills-triangle > hr {
+    background-color: white;
+  }
 
-.skills-triangle > hr {
-  background-color: white;
-}
+  .pyramid-top {
+    text-align: center;
+    height: 35%;
+    position: relative;
+    bottom: 20px;
+  }
 
-.pyramid-top {
-  text-align: center;
-  height: 35%;
-  position: relative;
-  bottom: 20px;
-}
+  .pyramid-top-text > hr {
+    background-color: black;
+  }
 
-.pyramid-top-text > hr {
-  background-color: black;
-}
+  .pyramid-top-contents {
+    display: inline-block;
+    position: absolute;
+    top: 80%;
+    transform: translate(-50%, -50%);
+  }
 
-.pyramid-top-contents {
-  display: inline-block;
-  position: absolute;
-  top: 80%;
-  transform: translate(-50%, -50%);
-}
-
-/* #pyramid-top-contents-logo {
+  /* #pyramid-top-contents-logo {
   height: 15%;
   width: 5%;
   object-fit: cover;
 } */
 
-.pyramid-mid {
-  text-align: center;
-  position: relative;
-  height: 40%;
-  top: 40px;
-}
-.pyramid-mid-text > hr {
-  padding-top: 0px;
-  width: 10%;
-  margin: 0 auto;
-  background-color: black;
+  .pyramid-mid {
+    text-align: center;
+    position: relative;
+    height: 40%;
+    top: 40px;
+  }
+  .pyramid-mid-text > hr {
+    padding-top: 0px;
+    width: 10%;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  .pyramid-bottom {
+    text-align: center;
+    height: 30%;
+    position: relative;
+    top: 40px;
+  }
+
+  .pyramid-bottom-text > hr {
+    width: 15%;
+    margin: 0 auto;
+    background-color: black;
+  }
 }
 
-.pyramid-bottom {
-  text-align: center;
-  height: 30%;
-  position: relative;
-  top: 40px;
-}
+/* =========================================================================================*/
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* =========================================================================================  */
+/* ========================================================================================= */
+/* ==========================================================================================*/
+/* For Mobile  */
 
-.pyramid-bottom-text > hr {
-  width: 15%;
-  margin: 0 auto;
-  background-color: black;
+@media (min-width: 350px) and (max-width: 767px) {
+  .skills-text-div {
+    background-color: black;
+    /* border: 1px orange solid; */
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+    -webkit-clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+    clip-path: polygon(0 4%, 86% 11%, 86% 86%, 0% 100%);
+    background-image: url("/static/portfolio/images/blue-galaxy.jpg");
+    animation-name: skills-text-animation;
+    animation-delay: 1s;
+    animation-duration: 2s;
+  }
+  .skills-text-div h3 {
+    font-size: 30px;
+  }
+
+  @keyframes skills-text-animation {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    25% {
+      opacity: 0.25;
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: translateX(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+  .skills-text {
+    /* background-color: black; */
+    /* border: 1px white solid; */
+    display: inline-block;
+    opacity: 0.5;
+  }
+
+  .skills {
+    height: 95vh;
+    /* border: 1px red solid; */
+    text-align: center;
+    /* Other good colors: #093028 #237A57 */
+    background-image: url("/static/portfolio/images/blue-galaxy.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: top;
+    opacity: 1;
+    color: white;
+    position: relative;
+  }
+  .skills > h3 {
+    padding-top: 5px;
+  }
+
+  .skills-pyramid-explanation {
+    position: absolute;
+    left: 63%;
+    top: 60px;
+    text-align: start;
+    font-size: 0.7rem;
+  }
+  .skills-pyramid-explanation span {
+    color: white;
+    font-weight: bold;
+    padding-right: 5px;
+    font-size: 0.8rem;
+  }
+
+  .skills-carousel {
+    padding: 5px;
+    height: 95%;
+    /* border: 2px rgb(28, 40, 177) solid; */
+  }
+
+  /* #skills-carousel {
+  padding: 5px;
+  height: 95%;
+  /* border: 2px rgb(28, 40, 177) solid; */
+  /* } */
+  .skills-carousel-inner {
+    /* border: 2px purple solid; */
+    height: 95%;
+    padding: 5px;
+  }
+
+  .skills-carousel-item {
+    /* border: 2px green solid; */
+    padding: 5px;
+    height: 95%;
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+  }
+  .skills-carousel-item-header {
+    color: white;
+    margin-bottom: 25px;
+  }
+
+  #skills-carousel-control-prev {
+    background-color: red;
+  }
+
+  .carousel-control-next {
+    /* background-color: red; */
+  }
+
+  .carousel-control-prev-icon {
+  }
+
+  .carousel-control-next-icon {
+  }
+
+  .skills-triangle {
+    /* background-image: url("/static/portfolio/images/blue-galaxy.png"); */
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    height: 65vh;
+    position: relative;
+    /* z-index: 1; */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  .skills-triangle > hr {
+    background-color: white;
+  }
+
+  .pyramid-top {
+    text-align: center;
+    height: 35%;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .pyramid-top-text > hr {
+    background-color: black;
+  }
+
+  .pyramid-top-contents {
+    display: inline-block;
+    position: absolute;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    font-size: 00.8rem;
+  }
+
+  /* #pyramid-top-contents-logo {
+  height: 15%;
+  width: 5%;
+  object-fit: cover;
+} */
+
+  .pyramid-mid {
+    text-align: center;
+    position: relative;
+    height: 40%;
+    top: 40px;
+  }
+  .pyramid-mid-text > hr {
+    padding-top: 0px;
+    width: 10%;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  .pyramid-bottom {
+    text-align: center;
+    height: 30%;
+    position: relative;
+    top: 40px;
+  }
+
+  .pyramid-bottom-text > hr {
+    width: 15%;
+    margin: 0 auto;
+    background-color: black;
+  }
 }

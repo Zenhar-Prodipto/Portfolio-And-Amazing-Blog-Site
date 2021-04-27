@@ -1,5 +1,6 @@
  {% extends "blog/base.html" %} {% load static %} {% block content %}
 
+
  <div class="home-blog-main-div">
 
 
@@ -16,11 +17,11 @@
 <div class="home-show-blogs">
     <div class="home-each-blog">
     <div class="blog-title">  <a id="link" href="{% url 'blog:details' blog.id %}">
-        <h2>{{ blog.title }}</h2>
+        <h2 class="blog-title">{{ blog.title }}</h2>
     </a>
 </div>
     <div class="created-on">
-    <h5 class="text-muted">{{ blog.created_on}}</h5>
+    <h5 class="text-muted created-on">{{ blog.created_on}}</h5>
     </div>
     <div class="blog-content">
     <h4>{{ blog.content|striptags|truncatechars:60 }}</h4>
@@ -35,8 +36,12 @@
     </div>  -->
 
 
-<div class="home-category-div">
-    <p>Categories</p>
+<div class="home-category-wrap">
+    <p class="home-category-text">Categories</p>
+
+    <ul class="category-ul">
+        <a class=" home-category-nav-link "href="{% url 'blog:home' %}"><li class="category-li">All</a></li>
+    </ul>
     {% for cat in category %}
     
 <div class="home-category-show ">
