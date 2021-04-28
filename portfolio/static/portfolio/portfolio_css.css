@@ -681,7 +681,7 @@
     opacity: 0.8;
     position: absolute;
     top: 20%;
-    left: 60%;
+    left: 55%;
     transform: translate(-50%, -50%);
   }
 
@@ -692,13 +692,13 @@
   }
 
   .welcome-text-span {
-    position: relative;
-    left: 13%;
+    /* position: relative;
+    left: 13%; */
   }
 
   .welcome-text-emoji {
     position: relative;
-    right: 4%;
+    right: 3%;
   }
 
   @keyframes welcome-text-animation {
