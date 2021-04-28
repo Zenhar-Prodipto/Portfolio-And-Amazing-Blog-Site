@@ -260,7 +260,7 @@
 /* ==========================================================================================*/
 /* For Mobile  */
 
-@media (min-width: 350px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .footer-main {
     font-family: lato sans-serif;
   }
@@ -326,7 +326,7 @@
 
   .box-2-skills {
     position: absolute;
-    top: 45%;
+    top: 42%;
     left: 58%;
     transform: translate(-50%, -50%);
   }
@@ -381,7 +381,7 @@
   }
 
   .big-Thank-You {
-    height: 20vh;
+    height: 45vh;
     color: white;
     background-color: black;
     text-align: center;
@@ -389,6 +389,162 @@
 
   .big-Thank-You-text {
     position: relative;
-    top: 25%;
+    top: 45%;
+  }
+}
+
+/* =========================================================================================*/
+/* ========================================================================================= */
+/* ========================================================================================= */
+/* =========================================================================================  */
+/* ========================================================================================= */
+/* ==========================================================================================*/
+/* For  small Mobiles  */
+
+@media (min-width: 310px) and (max-width: 479px) {
+  .footer-main {
+    font-family: lato sans-serif;
+  }
+
+  .footer-headers {
+    font-size: 1.2rem;
+  }
+  .footer-flex {
+    display: flex;
+    height: 100vh;
+    background-color: black;
+    margin-top: 20px;
+    justify-content: center;
+    flex-direction: row;
+    padding-left: 20px;
+  }
+
+  .box1 {
+    color: white;
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+
+    /* border: 2px red solid; */
+    /* font-family: "Courier New", Courier, monospace; */
+  }
+  .box1 ul {
+    /* All ul that has a class of box1  */
+    padding-left: 20px;
+  }
+  #footer-academic-interests-list ul {
+    position: relative;
+    left: 15%;
+  }
+
+  .box1 > h4 {
+    padding-bottom: 10px;
+  }
+
+  .box1 p {
+    font-size: 11px;
+  }
+
+  .box-1-lists {
+    font-size: 11px;
+  }
+  .box-1-lists ul {
+    padding-inline-start: 15px;
+  }
+
+  .box2 {
+    /* font-family: "Courier New", Courier, monospace; */
+    color: white;
+    flex: 1;
+    /* border: 2px red solid; */
+    position: relative;
+    padding: 22px;
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .box2 ul {
+    display: inline-block;
+  }
+
+  .box-2-skills {
+    position: absolute;
+    top: 41%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+  }
+
+  .box-2-skills > ul {
+    display: inline-block;
+  }
+
+  #footer-languages {
+    /* font-size: 16px; */
+  }
+  #footer-frameworks {
+    /* font-size: 16px; */
+  }
+
+  #footer-libraries {
+    /* font-size: 16px; */
+  }
+
+  #footer-languages-list {
+    text-align: start;
+  }
+
+  #footer-frameworks-list {
+    display: inline-block;
+    padding-left: 27%;
+    text-align: start;
+  }
+
+  #footer-libraries-list {
+    text-align: start;
+    padding-left: 10%;
+  }
+
+  .box2 h5 {
+    color: #007bff;
+    font-size: 16px;
+  }
+
+  #box-2-footer-header {
+    margin-bottom: 15%;
+    padding-left: 15px;
+  }
+
+  .box3 {
+    color: white;
+    flex: 1;
+    /* border: 2px red solid; */
+    padding: 22px;
+    text-align: center;
+  }
+  .box3 ul {
+    list-style-type: none;
+  }
+
+  .box3 a {
+    font-size: 9px;
+  }
+  .icons {
+    padding-right: 10px;
+  }
+  .social-media-icons {
+    padding-top: 0px;
+  }
+
+  .big-Thank-You {
+    height: 45vh;
+    color: white;
+    background-color: black;
+    text-align: center;
+  }
+
+  .big-Thank-You-text {
+    position: relative;
+    top: 32%;
   }
 }
