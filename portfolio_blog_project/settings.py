@@ -17,6 +17,8 @@ import dj_database_url  # for heroku
 import cloudinary
 import cloudinary_storage
 
+from decouple import config
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -192,10 +194,15 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Cloudinary stuff
-CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": "zenhar",
-    "API_KEY": os.getenv("API_KEY"),
-    "API_SECRET": os.getenv("API_SECRET"),
-}
+# CLOUDINARY_STORAGE = {
+#     "CLOUD_NAME": "zenhar",
+#     "API_KEY": os.getenv("API_KEY"),
+#     "API_SECRET": os.getenv("API_SECRET"),
+# }
 
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": config("CLOUD_NAME", default=""),
+    "API_KEY": config("API_KEY", default=""),
+    "API_SECRET": config("API_SECRET", default=""),
+}
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
