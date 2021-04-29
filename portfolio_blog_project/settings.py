@@ -193,7 +193,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Cloudinary stuff
 CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": os.getenv("CLOUD_NAME"),
+    "CLOUD_NAME": zenhar,
     "API_KEY": os.getenv("API_KEY"),
     "API_SECRET": os.getenv("API_SECRET"),
 }
