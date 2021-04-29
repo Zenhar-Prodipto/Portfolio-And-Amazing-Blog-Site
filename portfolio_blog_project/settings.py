@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import dj_database_url
+import dj_database_url  # for heroku
+
+# to store media files on heroku
+import cloudinary
+import cloudinary_storage
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -76,8 +80,12 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "portfolio",
+    # other apps
     "ckeditor",
     "ckeditor_uploader",
+    # Media Cloudinary
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 CKEDITOR_UPLOAD_PATH = "blog/blog_post_images"
@@ -182,3 +190,12 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # MEDIA
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# Cloudinary stuff
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": os.getenv("CLOUD_NAME"),
+    "API_KEY": os.getenv("API_KEY"),
+    "API_SECRET": os.getenv("API_SECRET"),
+}
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
