@@ -201,8 +201,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # }
 
 CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": config("CLOUD_NAME", default=""),
-    "API_KEY": config("API_KEY", default=""),
-    "API_SECRET": config("API_SECRET", default=""),
+    "CLOUD_NAME": "zenhar",
+    "API_KEY": "569888938654422",
+    "API_SECRET": "CXu3O9rjYKl1C4dp8pujsRCtdLY",
 }
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
