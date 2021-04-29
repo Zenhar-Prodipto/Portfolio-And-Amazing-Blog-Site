@@ -56,7 +56,7 @@
 
   .box-2-skills {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding-top: 75px;
@@ -77,6 +77,17 @@
     padding-left: 10%;
   }
 
+  #footer-languages {
+    position: relative;
+    bottom: 5%;
+  }
+  #footer-frameworks {
+    /* font-size: 16px; */
+  }
+
+  #footer-libraries {
+    /* font-size: 16px; */
+  }
   .box2 h5 {
     color: #007bff;
     font-size: 28px;
