@@ -1,4 +1,4 @@
-@media (min-width: 992x) {
+@media (min-width: 992px) and (max-width: 10) {
   .blog-details {
     height: 100vh;
     background-color: black;
