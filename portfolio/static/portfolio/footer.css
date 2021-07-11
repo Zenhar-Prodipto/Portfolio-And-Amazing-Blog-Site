@@ -481,7 +481,7 @@
 
   .box-2-skills {
     position: absolute;
-    top: 41%;
+    top: 30%;
     left: 58%;
     transform: translate(-50%, -50%);
   }
@@ -556,6 +556,6 @@
 
   .big-Thank-You-text {
     position: relative;
-    top: 32%;
+    top: -10%;
   }
 }
